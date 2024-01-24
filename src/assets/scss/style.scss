@@ -1,6 +1,8 @@
-.some-styles {
-  &__style {
-    height: 400em;
-    color: green;
-  }
-}
+@import "node_modules/normalize-scss/sass/normalize";
+@include normalize();
+@import "scss_files/about-us";
+@import "scss_files/contacts";
+@import "scss_files/functionality";
+@import "scss_files/main";
+@import "scss_files/navbar";
+

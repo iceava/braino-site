@@ -21,6 +21,7 @@
     "sass": "^1.70.0"
   },
   "dependencies": {
+    "normalize-scss": "^8.0.0",
     "sort-css-media-queries": "^2.2.0"
   }
 }
