@@ -328,6 +328,92 @@ template {
   display: none;
 }
 
+.assistance {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: -webkit-gradient(linear, left top, left bottom, from(#EEF8FE), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(180deg, #EEF8FE 0%, rgba(255, 255, 255, 0) 100%);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+.assistance-box {
+  display: grid;
+  grid-row: auto;
+  grid-gap: 290px;
+  grid-template-columns: 1fr minmax(1000px, 1fr);
+  justify-items: center;
+}
+.assistance-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-bottom: 52px;
+  justify-self: end;
+  padding-right: 140px;
+}
+.assistance-info__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 14px;
+  color: #222223;
+}
+.assistance-info__title--br {
+  color: #5ACAED;
+}
+.assistance-info__desc {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.assistance-info__button {
+  max-width: 175px;
+  width: 100%;
+  color: white;
+  padding: 20px 40px 20px 40px;
+  border-radius: 12px;
+  background: #5ACAED;
+  border: none;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  cursor: pointer;
+}
+.assistance-pics {
+  padding-top: 52px;
+  justify-self: end;
+  z-index: 99;
+}
+.assistance-pics__image {
+  max-width: 1000px;
+  width: 100%;
+}
+.assistance-wallpapers {
+  position: absolute;
+  top: 68%;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -452,4 +538,41 @@ template {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 12px;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+@media (min-width: 3860px) and (max-width: 1400px) {
+  .assistance-pics__image {
+    min-width: 900px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 2560px) {
+  .assistance-box {
+    grid-gap: 60px;
+    grid-template-columns: 1fr minmax(900px, 1fr);
+  }
+  .assistance-info {
+    padding-right: 80px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .assistance-box {
+    grid-template-columns: 1fr 1fr;
+  }
+  .assistance-info {
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .assistance-info {
+    padding-right: 0;
+  }
 }
