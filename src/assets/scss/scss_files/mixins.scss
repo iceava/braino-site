@@ -1,0 +1,42 @@
+$primary-color: #5ACAED;
+
+@mixin list-menu {
+  font-family: Open Sans, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+@mixin main-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  color: #000000;
+}
+
+@mixin title-text {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+@mixin field-settings {
+  border-radius: 18px;
+  box-shadow: 0 3px 20px 0 rgba(8, 15, 52, 0.06);
+  max-width: 286px;
+  width: 100%;
+  border: none;
+  padding: 24px 22px;
+}
+
+@mixin field-placeholder {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}

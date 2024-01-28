@@ -14,46 +14,110 @@
     <title>Braino WebPage</title>
 </head>
 <body>
-<nav class="nav">
-    <div class="nav-menu">
-        <img class="nav-menu__logo" src="src/assets/images/nav-bar/logo.svg" alt="logo">
-        <ul class="nav-menu__links">
-            <li class="nav-menu__links--item">
-                <a class="nav-menu__links--item-link" href="#">Acasă</a>
-            </li>
-            <li class="nav-menu__links--item">
-                <a class="nav-menu__links--item-link" href="#">Despre noi</a>
-            </li>
-            <li class="nav-menu__links--item">
-                <a class="nav-menu__links--item-link" href="#">Misiune, viziune și valori</a>
-            </li>
-            <li class="nav-menu__links--item menu"><span>Funcționalități</span><span>
+<header>
+    <nav class="nav">
+        <div class="nav-menu">
+            <img class="nav-menu__logo" src="src/assets/images/nav-bar/logo.svg" alt="logo">
+            <ul class="nav-menu__links">
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="#">Acasă</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="#">Despre noi</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="#">Misiune, viziune și valori</a>
+                </li>
+                <li class="nav-menu__links--item menu"><span>Funcționalități</span><span>
                     <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4.78037 5.8583L8.89304 0.766687C8.9617 0.681731 9 0.568861 9 0.451488C9 0.334114 8.9617 0.221245 8.89304 0.136289L8.8884 0.130807C8.85511 0.089479 8.81505 0.056571 8.77064 0.0340834C8.72624 0.0115957 8.67842 -9.25561e-07 8.6301 -9.21336e-07C8.58177 -9.17112e-07 8.53395 0.0115958 8.48955 0.0340834C8.44514 0.0565711 8.40508 0.089479 8.3718 0.130807L4.49923 4.92549L0.628206 0.130808C0.594923 0.0894797 0.55486 0.0565717 0.510454 0.0340841C0.466049 0.0115965 0.41823 -2.03432e-07 0.369905 -1.99207e-07C0.32158 -1.94983e-07 0.273761 0.0115965 0.229356 0.0340841C0.184951 0.0565718 0.144888 0.0894797 0.111605 0.130808L0.106958 0.13629C0.038301 0.221246 4.58347e-07 0.334115 4.68608e-07 0.451488C4.78869e-07 0.568862 0.038301 0.681732 0.106958 0.766688L4.21963 5.8583C4.25579 5.90308 4.29929 5.93872 4.34749 5.96308C4.39568 5.98744 4.44757 6 4.5 6C4.55243 6 4.60432 5.98744 4.65251 5.96308C4.70071 5.93872 4.74421 5.90308 4.78037 5.8583Z"
                               fill="black"/>
                     </svg>
 
                 </span>
-                <ul class="nav-menu__links--item-ul">
-                    <li class="link-item"><a class="link-item__link" href="#">Ce poate să facă BrainO?</a></li>
-                    <li class="link-item"><a class="link-item__link" href="#">Ce module conține BrainO?</a></li>
-                </ul>
-            </li>
-            <li class="nav-menu__links--item">
-                <a class="nav-menu__links--item-link" href="#">Servicii</a>
-            </li>
-            <li class="nav-menu__links--item">
-                <a class="nav-menu__links--item-link" href="#">Contact</a>
-            </li>
-        </ul>
-    </div>
-    <div class="nav-lg">
-        <span class="nav-lg__item"><img src="src/assets/images/nav-bar/langs-romanian.svg" alt="ro"></span>
-        <span class="nav-lg__item"><img src="src/assets/images/nav-bar/langs-en.svg" alt="en"></span>
-    </div>
-</nav>
+                    <ul class="nav-menu__links--item-ul">
+                        <li class="link-item"><a class="link-item__link" href="#">Ce poate să facă BrainO?</a></li>
+                        <li class="link-item"><a class="link-item__link" href="#">Ce module conține BrainO?</a></li>
+                    </ul>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="#">Servicii</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-lg">
+            <span class="nav-lg__item"><img src="src/assets/images/nav-bar/langs-romanian.svg" alt="ro"></span>
+            <span class="nav-lg__item"><img src="src/assets/images/nav-bar/langs-en.svg" alt="en"></span>
+        </div>
+    </nav>
 
-<main>
+    <nav class="navigation" role="navigation">
+        <div class="nav-menu mobile">
+            <img class="nav-menu__logo" src="src/assets/images/nav-bar/logo.svg" alt="logo">
+        </div>
+        <div id="menuToggle">
+            <!--
+            A fake / hidden checkbox is used as click reciever,
+            so you can use the :checked selector on it.
+            -->
+            <input type="checkbox" />
+
+            <!--
+            Some spans to act as a hamburger.
+
+            They are acting like a real hamburger,
+            not that McDonalds stuff.
+            -->
+            <span class="elements"></span>
+            <span class="elements"></span>
+            <span class="elements"></span>
+
+            <!--
+            Too bad the menu has to be inside of the button
+            but hey, it's pure CSS magic.
+            -->
+            <ul class="nav-menu__links" id="menu">
+                <div class="nav-lg">
+                    <span class="nav-lg__item"><img src="src/assets/images/nav-bar/langs-romanian.svg" alt="ro"></span>
+                    <span class="nav-lg__item"><img src="src/assets/images/nav-bar/langs-en.svg" alt="en"></span>
+                </div>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="#">Acasă</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="#">Despre noi</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="#">Misiune, viziune și valori</a>
+                </li>
+                <li class="nav-menu__links--item menu"><span>Funcționalități</span><span>
+                    <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.78037 5.8583L8.89304 0.766687C8.9617 0.681731 9 0.568861 9 0.451488C9 0.334114 8.9617 0.221245 8.89304 0.136289L8.8884 0.130807C8.85511 0.089479 8.81505 0.056571 8.77064 0.0340834C8.72624 0.0115957 8.67842 -9.25561e-07 8.6301 -9.21336e-07C8.58177 -9.17112e-07 8.53395 0.0115958 8.48955 0.0340834C8.44514 0.0565711 8.40508 0.089479 8.3718 0.130807L4.49923 4.92549L0.628206 0.130808C0.594923 0.0894797 0.55486 0.0565717 0.510454 0.0340841C0.466049 0.0115965 0.41823 -2.03432e-07 0.369905 -1.99207e-07C0.32158 -1.94983e-07 0.273761 0.0115965 0.229356 0.0340841C0.184951 0.0565718 0.144888 0.0894797 0.111605 0.130808L0.106958 0.13629C0.038301 0.221246 4.58347e-07 0.334115 4.68608e-07 0.451488C4.78869e-07 0.568862 0.038301 0.681732 0.106958 0.766688L4.21963 5.8583C4.25579 5.90308 4.29929 5.93872 4.34749 5.96308C4.39568 5.98744 4.44757 6 4.5 6C4.55243 6 4.60432 5.98744 4.65251 5.96308C4.70071 5.93872 4.74421 5.90308 4.78037 5.8583Z"
+                              fill="black"/>
+                    </svg>
+
+                </span>
+                    <ul class="nav-menu__links--item-ul">
+                        <li class="link-item"><a class="link-item__link" href="#">Ce poate să facă BrainO?</a></li>
+                        <li class="link-item"><a class="link-item__link" href="#">Ce module conține BrainO?</a></li>
+                    </ul>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="#">Servicii</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+<main style="background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #EAF7FF 100%);">
     <article class="assistance">
         <div class="assistance-box">
             <div class="assistance-info">
@@ -73,6 +137,121 @@
         <img alt="welcome-wallpapers" class="assistance-wallpapers"
              src="src/assets/images/acasa/welcome-wallpapers.svg">
     </article>
+
+    <section style="padding: 0 24px">
+        <article class="movies">
+            <h2 class="movies-title">BrainO</h2>
+            <p class="movies-desc">Click pe video pentru a descoperi cele mai importante funcționalități pe care le
+                oferă aplicația BrainO.</p>
+            <div class="movies-wrapper">
+                <img src="src/assets/images/acasa/movies-placeholder.svg">
+            </div>
+        </article>
+
+        <article class="mission">
+            <div class="mission-desc">
+                <h2 class="mission-desc__title">
+                    Misiunea <span class="mission-desc__title--braino">BrainO</span>
+                </h2>
+                <p class="mission-desc__desc">
+           <span>
+                 Misiunea noastră este să contribuim la creșterea nivelului de pregătire a oamenilor din asigurări.
+           </span>
+                    <span>
+                 Pentru că doar profesioniștii sunt capabili să ofere servicii de calitate, de care au nevoie clienții și familiile lor. Aceasta este contribuția noastră la bunăstarea societății.
+            </span>
+                </p>
+            </div>
+            <img class="mission-image" alt="mission" src="src/assets/images/acasa/mission-braino.png">
+        </article>
+
+        <article class="mission">
+            <div class="mission-desc">
+                <h2 class="mission-desc__title">
+                    Viziunea <span class="mission-desc__title--braino">BrainO</span>
+                </h2>
+                <p class="mission-desc__desc">
+               <span>
+                    BrainO este sursa preferată de inspirație și de învățare a <br> oamenilor din asigurări.
+               </span>
+                    <span>
+                    Familiile deservite de utilizatorii noștri au o viață <br> mai bună. Și utilizatorii, la fel.
+                </span>
+                </p>
+            </div>
+            <img class="mission-image" alt="mission" src="src/assets/images/acasa/vission-braino.png">
+        </article>
+
+        <article class="braino">
+            <h2 class="braino-title">Valorile <span class="braino-title__name">BrainO</span></h2>
+            <p class="braino-desc"><span class="braino-desc__desc">"Nimic nu este mai puternic decât o idee căreia
+            i-a venit vremea"</span>
+                <br> Victor Hugo</p>
+            <div class="braino-card">
+                <div class="braino-card__item">
+                    <img alt="people-integrity" class="braino-card__item--image"
+                         src="src/assets/images/acasa/values-braino/peoples-integrity.svg">
+                    <h6 class="braino-card__item--title">Onestitate și integritate</h6>
+                    <p class="braino-card__item--desc">Recomandăm metode care și-au dovedit utilitatea, deoarece facem
+                        noi
+                        înșine ceea ce le propunem și altora să facă. Scopul final este de a-i educa pe clienți să ia
+                        deciziile optime pentru siguranța financiară a familiilor lor
+                    </p>
+                </div>
+                <div class="braino-card__item">
+                    <img alt="books" class="braino-card__item--image"
+                         src="src/assets/images/acasa/values-braino/books.svg">
+                    <h6 class="braino-card__item--title">Accesibilitate și simplitate</h6>
+                    <p class="braino-card__item--desc">Găsești rapid ceea ce cauți și folosim un limbaj ușor de
+                        înțeles</p>
+                </div>
+                <div class="braino-card__item">
+                    <img class="braino-card__item--image" src="src/assets/images/acasa/values-braino/books.svg">
+                    <h6 class="braino-card__item--title">Inovație</h6>
+                    <p class="braino-card__item--desc">Este un concept unic dedicat celor care vând asigurări
+                        compozite.Folosim inteligența artificială pentru a spori valoarea conținutului</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="contact">
+            <h6 class="contact-title">Contact</h6>
+            <div class="contact-items">
+                <div class="contact-items__info">
+                    <p class="contact-items__info--desc">Ne puteți contacta telefonic sau prin emailpentru orice
+                        întrebare sau solicitare.</p>
+                    <p class="contact-items__info--desc">Sau puteți scrie un mesaj în căsuța din dreapta</p>
+                    <div class="contact-items__info--details">
+                        <img alt="telephone" src="src/assets/images/contacts/telefon.svg">
+                        <div class="details-info">
+                            <span>Telefon</span>
+                            <strong>+40 720 000 044</strong>
+                            <strong>+40 722 581 646</strong>
+                        </div>
+                    </div>
+
+                    <div class="contact-items__info--details">
+                        <img alt="messages" src="src/assets/images/contacts/messages.svg">
+                        <div class="details-info">
+                            <span>Email</span>
+                            <strong>emilian@braino.group</strong>
+                            <strong>simona@braino.group</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-items__email">
+                    <form class="form-email" onsubmit="submit">
+                        <div class="form-email__box">
+                            <input class="form-email__box--name" type="text" placeholder="Numele" style='background-image: url("src/assets/images/contacts/names-placeholder.svg")'>
+                            <input class="form-email__box--email" type="email" placeholder="Email" style='background-image: url("src/assets/images/contacts/emails-placeholder.svg")'>
+                        </div>
+                        <textarea class="form-email__message"></textarea>
+                        <button class="form-email__button" type="submit">Trimite</button>
+                    </form>
+                </div>
+            </div>
+        </article>
+    </section>
 </main>
 
 
