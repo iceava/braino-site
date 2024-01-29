@@ -1126,11 +1126,8 @@ template {
   font-family: "Open Sans", sans-serif;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .navigation {
-    display: none;
-  }
-  #menuToggle {
     display: none;
   }
   .mobile {
