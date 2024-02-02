@@ -11,8 +11,8 @@ const sortCSSmq = require('sort-css-media-queries');
 
 const path = {
     scssFolder: './src/assets/scss/',
-    htmlFolder: './src',
-    htmlFile: './src/index1.html',
+    htmlFolder: './src/pages',
+    htmlFile: './src/pages/about-us.html',
     scssFiles: './src/assets/scss/**/*.scss',
     scssFile: './src/assets/scss/style.scss',
     cssFolder: './src/assets/css/',
@@ -43,12 +43,6 @@ function scss() {
         sound: false
     })).
     pipe(browserSync.reload({stream: true}));
-}
-
-function html() {
-    return src('./src/index.html')
-        .pipe(concat('index.html'))
-        .pipe(dest('./dist'));
 }
 
 
@@ -86,7 +80,7 @@ async function sync() {
 function watchFiles() {
     syncInit();
     watch(path.scssFiles, series(scss));
-    watch(path.htmlFile, html)
+    watch(path.htmlFile, sync)
     watch(path.htmlFiles, sync);
     watch(path.jsFiles, sync);
 }
@@ -95,4 +89,3 @@ task('comb', series(comb));
 task('scss', series(scss));
 task('dev', series(scssDev));
 task('watch', watchFiles);
-task('html', html);

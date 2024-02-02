@@ -1,0 +1,62 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  &-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    &__title {
+      @include footer-title;
+      margin: 0;
+    }
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+      gap: 16px;
+      &--item {
+        list-style-type: none;
+        .item-link {
+          @include links-items;
+        }
+      }
+    }
+  }
+  &-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    &__title {
+      font-family: Segoe UI Variable;
+      font-size: 32px;
+      text-align: center;
+      line-height: 24px;
+      letter-spacing: 0;
+      margin: 0;
+      font-weight: 700;
+    }
+    &__info {
+      @include links-items;
+    }
+  }
+  &-us {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    &__title {
+      @include footer-title;
+      margin: 0;
+    }
+    &__social {
+      display: flex;
+      gap: 8px;
+      &--link {
+        text-decoration: none;
+      }
+    }
+  }
+}

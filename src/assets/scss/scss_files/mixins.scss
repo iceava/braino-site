@@ -40,3 +40,20 @@ $primary-color: #5ACAED;
   font-weight: 400;
   line-height: 30px;
 }
+
+@mixin footer-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 33px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+@mixin links-items {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #222223;
+  line-height: 24px;
+  letter-spacing: 0;
+}
