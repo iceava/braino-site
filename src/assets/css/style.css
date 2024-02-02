@@ -626,6 +626,7 @@ template {
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
+  z-index: 99;
   cursor: pointer;
 }
 .assistance-pics {
@@ -701,6 +702,7 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
   max-width: 1200px;
   width: 100%;
   margin: 150px auto 0 auto;
@@ -826,7 +828,6 @@ template {
           box-shadow: 0 3px 20px 0 rgba(8, 15, 52, 0.15);
   max-width: 342px;
   width: 100%;
-  margin-bottom: 150px;
 }
 .braino-card__item--title {
   color: rgba(34, 34, 35, 0.8);
@@ -845,6 +846,10 @@ template {
   color: #000000;
   margin: 0;
   margin-top: -6px;
+}
+
+.section {
+  padding: 0 24px;
 }
 
 .nav {
@@ -932,6 +937,7 @@ template {
 .nav-menu__links--item-ul .link-item {
   list-style-type: none;
   position: relative;
+  padding: 4px !important;
 }
 .nav-menu__links--item-ul .link-item::before {
   content: "";
@@ -941,8 +947,8 @@ template {
   width: 4px;
   height: 4px;
   position: absolute;
-  left: -10px;
-  top: 10px;
+  left: -4px;
+  top: 18px !important;
 }
 .nav-menu__links--item-ul .link-item__link {
   font-family: Open Sans, sans-serif;
@@ -987,7 +993,7 @@ template {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  z-index: 1;
+  z-index: 9999;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -1167,6 +1173,13 @@ template {
   }
 }
 
+@media (max-width: 1200px) {
+  .mission-image {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
 @media (max-width: 1080px) {
   .nav {
     padding: 18px 24px;
@@ -1212,7 +1225,156 @@ template {
   }
 }
 
+@media (max-width: 812px) {
+  .contact-items__email {
+    padding: 24px 22px;
+  }
+}
+
 @media (max-width: 768px) {
+  .contact {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .contact-title {
+    font-size: 39px;
+  }
+  .contact-items {
+    margin-top: 14px;
+    padding-left: 24px;
+    padding-right: 24px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact-items__info--details {
+    justify-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    padding: 22px;
+    width: 100%;
+  }
+  .contact-items__info--details:first-of-type {
+    margin-top: 0;
+  }
+  .contact-items__info--desc {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 0;
+  }
+  .contact-items__email {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .contact-items__email .form-email__button {
+    font-size: 16px;
+    padding: 18px 34px;
+  }
+  .contact-items__email .form-email__box--name {
+    background-size: 18px;
+  }
+  .contact-items__email .form-email__box--name::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+  .contact-items__email .form-email__box--name::-moz-placeholder {
+    font-size: 16px;
+  }
+  .contact-items__email .form-email__box--name:-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .contact-items__email .form-email__box--name::-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .contact-items__email .form-email__box--name::placeholder {
+    font-size: 16px;
+  }
+  .contact-items__email .form-email__box--email {
+    background-size: 18px;
+  }
+  .contact-items__email .form-email__box--email::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+  .contact-items__email .form-email__box--email::-moz-placeholder {
+    font-size: 16px;
+  }
+  .contact-items__email .form-email__box--email:-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .contact-items__email .form-email__box--email::-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .contact-items__email .form-email__box--email::placeholder {
+    font-size: 16px;
+  }
+  .assistance-box {
+    grid-gap: 12px;
+  }
+  .assistance-info__title {
+    font-size: 39px;
+    line-height: 52px;
+  }
+  .assistance-info__desc {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .assistance-info__button {
+    font-size: 16px;
+    padding: 18px 34px;
+  }
+  .movies-title {
+    font-size: 39px;
+    margin-top: 14px;
+    line-height: 52px;
+  }
+  .movies-desc {
+    font-size: 16px;
+    line-height: 26px;
+    margin: 12px 0;
+  }
+  .mission {
+    margin-top: 90px;
+  }
+  .mission:nth-of-type(3) {
+    margin-bottom: 60px;
+  }
+  .mission-desc {
+    padding: 34px 18px 24px 34px;
+  }
+  .mission-desc__title {
+    font-size: 39px;
+    line-height: 52px;
+  }
+  .mission-desc__desc {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .mission-desc__desc > span:first-of-type {
+    margin-bottom: 24px;
+  }
+  .braino-title {
+    font-size: 39px;
+  }
+  .braino-desc {
+    font-size: 16px;
+    margin: 14px 0;
+  }
+  .braino-desc__desc {
+    font-size: 16px;
+  }
+  .braino-card__item {
+    padding: 34px 16px;
+  }
+  .braino-card__item--title {
+    font-size: 18px;
+    line-height: 34px;
+  }
+  .braino-card__item--desc {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 8px;
+  }
   .nav {
     padding: 18px 24px 0 24px;
     -webkit-box-align: start;
@@ -1233,9 +1395,80 @@ template {
   .nav-menu__links--item-ul .link-item::before {
     top: 24px;
   }
+  .menu:hover > .nav-menu__links--item-ul {
+    gap: 0;
+  }
+}
+
+@media (max-width: 764px) {
+  .mission:nth-of-type(3) .mission-desc {
+    padding: 34px 18px 24px 34px;
+  }
 }
 
 @media (max-width: 568px) {
+  .contact-items__info--details > img {
+    max-width: 60px;
+  }
+  .contact-items__info--details {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact-items__info--details .details-info {
+    -ms-flex-item-align: self-start;
+        align-self: self-start;
+  }
+  .contact-items__email .form-email__button {
+    font-size: 14px;
+    padding: 14px 24px;
+    max-width: 120px;
+  }
+  .assistance {
+    padding: 0;
+  }
+  .assistance-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    grid-gap: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .assistance-info {
+    margin-bottom: 0;
+    padding-left: 24px;
+    padding-top: 14px;
+    padding-right: 24px;
+  }
+  .assistance-info__button {
+    font-size: 14px;
+    padding: 14px 24px;
+    max-width: 120px;
+  }
+  .assistance-pics {
+    padding-top: 24px;
+    -ms-flex-item-align: end;
+        align-self: end;
+  }
+  .assistance-pics__image {
+    max-width: 400px;
+  }
+  .mission {
+    margin-top: 60px;
+  }
+  .braino-card__item {
+    max-width: 342px;
+  }
+  .section {
+    padding: 0 16px;
+  }
   .navigation {
     padding-right: 14px;
   }
@@ -1251,7 +1484,146 @@ template {
   }
 }
 
+@media (max-width: 448px) {
+  .contact {
+    margin-top: 34px;
+    margin-bottom: 34px;
+  }
+  .contact-title {
+    font-size: 34px;
+  }
+  .contact-items__info--details .details-info > span {
+    font-size: 16px;
+  }
+  .contact-items__info--details .details-info > strong {
+    font-size: 14px;
+  }
+  .contact-items__info--desc {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 0;
+  }
+  .contact-items__email .form-email__box--name {
+    background-size: 16px;
+  }
+  .contact-items__email .form-email__box--name::-webkit-input-placeholder {
+    font-size: 14px;
+  }
+  .contact-items__email .form-email__box--name::-moz-placeholder {
+    font-size: 14px;
+  }
+  .contact-items__email .form-email__box--name:-ms-input-placeholder {
+    font-size: 14px;
+  }
+  .contact-items__email .form-email__box--name::-ms-input-placeholder {
+    font-size: 14px;
+  }
+  .contact-items__email .form-email__box--name::placeholder {
+    font-size: 14px;
+  }
+  .contact-items__email .form-email__box--email {
+    background-size: 16px;
+  }
+  .contact-items__email .form-email__box--email::-webkit-input-placeholder {
+    font-size: 14px;
+  }
+  .contact-items__email .form-email__box--email::-moz-placeholder {
+    font-size: 14px;
+  }
+  .contact-items__email .form-email__box--email:-ms-input-placeholder {
+    font-size: 14px;
+  }
+  .contact-items__email .form-email__box--email::-ms-input-placeholder {
+    font-size: 14px;
+  }
+  .contact-items__email .form-email__box--email::placeholder {
+    font-size: 14px;
+  }
+  .assistance-info {
+    margin-bottom: 0;
+    padding-left: 12px;
+    padding-top: 14px;
+    padding-right: 12px;
+  }
+  .assistance-info__title {
+    font-size: 34px;
+    line-height: 38px;
+  }
+  .assistance-info__desc {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .movies-title {
+    font-size: 34px;
+    margin-top: 14px;
+    line-height: 38px;
+  }
+  .movies-desc {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 12px 0;
+  }
+  .mission {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mission:nth-of-type(3) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mission-desc__title {
+    font-size: 34px;
+    line-height: 38px;
+  }
+  .mission-desc__desc {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .braino-title {
+    font-size: 34px;
+    line-height: 38px;
+  }
+  .braino-desc {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .braino-desc__desc {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .braino-card__item {
+    max-width: 280px;
+    padding: 24px 12px;
+  }
+  .braino-card__item--title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .braino-card__item--desc {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+  }
+  .braino-card__item--image {
+    max-width: 60px;
+  }
+  .mission-image {
+    border-radius: 24px;
+  }
+}
+
 @media (max-width: 380px) {
+  .nav-menu__links--item-ul {
+    top: 39px;
+    left: -12px;
+  }
+  .menu .nav-menu__links--item-ul {
+    max-width: 214px;
+  }
   #menu {
     padding-right: 0;
     max-width: 254px;
@@ -1266,6 +1638,12 @@ template {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: end;
+  }
+}
+
+@media (max-width: 338px) {
+  .braino-card__item {
+    max-width: 190px;
   }
 }
 

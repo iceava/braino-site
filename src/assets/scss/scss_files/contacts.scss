@@ -6,8 +6,22 @@
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 150px;
+  @media (max-width: 768px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  @media (max-width: 448px) {
+    margin-top: 34px;
+    margin-bottom: 34px;
+  }
 
   &-title {
+    @media (max-width: 768px) {
+      font-size: 39px;
+    }
+    @media (max-width: 448px) {
+      font-size: 34px;
+    }
     @include title-text;
     margin: 0;
     text-align: left;
@@ -21,6 +35,13 @@
 
     @media (max-width: 986px) {
       gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      margin-top: 14px;
+      padding-left: 24px;
+      padding-right: 24px;
+      flex-direction: column;
     }
 
     &__info {
@@ -39,24 +60,63 @@
         gap: 20px;
         padding: 32px;
         max-width: 380px;
+        & > img {
+          @media(max-width: 568px) {
+            max-width: 60px;
+          }
+        }
+        @media (max-width: 768px) {
+          justify-self: center;
+          align-self: center;
+          padding: 22px;
+          width: 100%;
+        }
+        @media (max-width: 568px) {
+          flex-direction: column;
+          align-items: center;
+        }
+        &:first-of-type {
+          @media (max-width: 768px) {
+            margin-top: 0;
+          }
+        }
 
         .details-info {
           display: flex;
           justify-content: center;
           gap: 6px;
           flex-direction: column;
+          @media (max-width: 568px) {
+            align-self: self-start;
+          }
 
           & > span {
             font-size: 18px;
+            @media (max-width: 448px) {
+              font-size: 16px;
+            }
           }
 
           & > strong {
             font-size: 20px;
+            @media (max-width: 448px) {
+              font-size: 14px;
+            }
           }
         }
       }
 
       &--desc {
+        @media (max-width: 768px) {
+          font-size: 16px;
+          line-height: 24px;
+          margin-bottom: 0;
+        }
+        @media (max-width: 448px) {
+          font-size: 14px;
+          line-height: 24px;
+          margin-bottom: 0;
+        }
         @include main-text;
 
         &:first-of-type {
@@ -79,6 +139,12 @@
       max-width: 592px;
       width: 100%;
       padding: 46px 52px;
+      @media (max-width: 812px) {
+        padding: 24px 22px;
+      }
+      @media (max-width: 768px) {
+        align-self: center;
+      }
 
       .form-email {
         width: 100%;
@@ -109,6 +175,15 @@
           font-weight: 600;
           line-height: 20px;
           max-width: 143px;
+          @media (max-width: 768px) {
+            font-size: 16px;
+            padding: 18px 34px;
+          }
+          @media (max-width: 568px) {
+            font-size: 14px;
+            padding: 14px 24px;
+            max-width: 120px;
+          }
         }
 
         &__box {
@@ -123,13 +198,25 @@
             @include field-settings;
             background-position: 92% center;
             background-size: 20px;
+            @media (max-width: 768px) {
+              background-size: 18px;
+            }
+            @media (max-width: 448px) {
+              background-size: 16px;
+            }
             @media(max-width: 986px) {
              max-width: 100%;
               width: auto;
             }
             background-repeat: no-repeat;
             &::placeholder {
-              @include field-placeholder
+              @include field-placeholder;
+              @media (max-width: 768px) {
+                font-size: 16px;
+              }
+              @media (max-width: 448px) {
+                font-size: 14px;
+              }
             }
           }
 
@@ -142,8 +229,20 @@
              max-width: 100%;
               width: auto;
             }
+            @media (max-width: 768px) {
+             background-size: 18px;
+            }
+            @media (max-width: 448px) {
+             background-size: 16px;
+            }
             &::placeholder {
-              @include field-placeholder
+              @include field-placeholder;
+              @media (max-width: 768px) {
+                font-size: 16px;
+              }
+              @media (max-width: 448px) {
+                font-size: 14px;
+              }
             }
           }
         }

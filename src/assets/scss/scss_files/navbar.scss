@@ -74,10 +74,15 @@
             top: 39px;
             left: 0;
           }
+          @media (max-width: 380px) {
+            top: 39px;
+            left: -12px;
+          }
 
           .link-item {
             list-style-type: none;
             position: relative;
+            padding: 4px !important;
 
             &::before {
               content: "";
@@ -87,8 +92,8 @@
               width: 4px;
               height: 4px;
               position: absolute;
-              left: -10px;
-              top: 10px;
+              left: -4px;
+              top: 18px !important;
 
               @media (max-width: 768px) {
                 top: 24px;
@@ -111,12 +116,19 @@
 .menu {
   position: relative;
   cursor: pointer;
-
+  .nav-menu__links--item-ul {
+    @media (max-width: 380px) {
+      max-width: 214px;
+    }
+  }
   &:hover > .nav-menu__links--item-ul {
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 12px;
+    @media(max-width: 768px) {
+      gap: 0;
+    }
   }
 }
 
@@ -139,7 +151,7 @@
   top: -30px;
   left: 50px;
   width: max-content;
-  z-index: 1;
+  z-index: 9999;
   user-select: none;
 
   @media (max-width: 460px) {
