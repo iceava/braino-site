@@ -329,8 +329,8 @@ template {
 }
 
 .section-about {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(3%, #EEF8FE), color-stop(5%, rgba(255, 255, 255, 0)));
-  background: linear-gradient(180deg, #EEF8FE 3%, rgba(255, 255, 255, 0) 5%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(3%, rgba(238, 248, 254, 0.6509803922)), color-stop(5%, rgba(255, 255, 255, 0)));
+  background: linear-gradient(180deg, rgba(238, 248, 254, 0.6509803922) 3%, rgba(255, 255, 255, 0) 5%);
   padding: 11px 16px 0 16px;
 }
 
@@ -1486,8 +1486,8 @@ template {
 }
 
 .section-can {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(4%, #EEF8FE), color-stop(8%, rgba(255, 255, 255, 0)));
-  background: linear-gradient(180deg, #EEF8FE 4%, rgba(255, 255, 255, 0) 8%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(4%, rgba(238, 248, 254, 0.6509803922)), color-stop(8%, rgba(255, 255, 255, 0)));
+  background: linear-gradient(180deg, rgba(238, 248, 254, 0.6509803922) 4%, rgba(255, 255, 255, 0) 8%);
   position: relative;
   padding: 0 24px;
 }
