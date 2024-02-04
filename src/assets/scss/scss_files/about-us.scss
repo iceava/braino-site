@@ -1,0 +1,261 @@
+@import "mixins";
+
+.section-about {
+  background: linear-gradient(180deg, #EEF8FE 3%, rgba(255, 255, 255, 0) 5%);
+  padding: 11px 16px 0 16px;
+}
+
+.article {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 80px auto 0 auto;
+  gap: 14px;
+  @media (max-width: 986px) {
+    margin-top: 120px;
+  }
+  &:first-of-type {
+    @media (max-width: 768px) {
+      margin-top: 40px;
+    }
+    @media (min-width: 768px) and (max-width: 986px) {
+     margin-top: 20px;
+      .article-pics {
+        margin-top: 0;
+      }
+    }
+  }
+  @media (max-width: 986px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  &:nth-of-type(2) {
+    flex-direction: row-reverse;
+    margin-top: 80px;
+    @media (max-width: 986px) {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 120px;
+    }
+  }
+  &-block {
+    &__title {
+      @include title-text;
+      text-align: left;
+      margin: 0;
+      @media (max-width: 768px) {
+        font-size: 39px;
+        line-height: 52px;
+      }
+      @media (max-width: 448px) {
+        font-size: 34px;
+        line-height: 38px;
+      }
+      @media (max-width: 368px) {
+        font-size: 26px;
+        line-height: 38px;
+        text-align: center;
+      }
+    }
+    &__pretitle {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 30px;
+      letter-spacing: 0;
+      color: $primary-color;
+      margin: 25px 0 0 0;
+    }
+    &__list {
+      max-width: 662px;
+      padding-left: 24px;
+      @media (max-width: 368px) {
+        padding-left: 14px;
+      }
+    }
+    &__list > li {
+      @include main-text;
+      @media (max-width: 768px) {
+        font-size: 16px;
+        text-align: justify;
+        line-height: 26px;
+      }
+      @media (max-width: 448px) {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+  }
+  &-pics {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 32px;
+    @media (max-width: 986px) {
+      margin-top: 38px;
+    }
+    &__first {
+      &--image {
+        max-width: 428px;
+        width: 100%;
+        @media (max-width: 986px) {
+          max-width: 360px;
+        }
+        @media (max-width: 768px) {
+          max-width: 320px;
+        }
+        @media (max-width: 568px) {
+          max-width: 280px;
+        }
+      }
+      &:first-of-type {
+        padding-left: 54px;
+        background-repeat: no-repeat;
+        background-position: 0 32%;
+        position: relative;
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: -29%;
+          left: 40%;
+          z-index: -1;
+          background-image: url("../images/about-us/square-figure.svg");
+          background-repeat: no-repeat;
+          width: 208px;
+          height: 208px;
+          @media (max-width: 986px) {
+            width: 168px;
+            height: 168px;
+            top: -18%;
+            left: 46%;
+          }
+          @media (max-width: 368px) {
+            width: 120px;
+            height: 120px;
+          }
+        }
+      }
+      &:last-of-type  {
+        background-repeat: no-repeat;
+        background-position: 98% 140%;
+        position: relative;
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 60%;
+          left: 50%;
+          z-index: -1;
+          background-image: url("../images/about-us/circle-fourth-part-right.svg");
+          background-repeat: no-repeat;
+          width: 251px;
+          height: 260px;
+          @media (max-width: 1200px) {
+            top: 50%;
+            left: 46%;
+          }
+          @media (max-width: 768px) {
+            top: 40%;
+            left: 38%;
+          }
+          @media (max-width: 568px) {
+            top: 29%;
+            left: 29%;
+          }
+
+          @media (max-width: 368px) {
+            top: 29%;
+            left: 4%;
+          }
+        }
+        .article-pics__first--image {
+          max-width: 386px;
+          width: 100%;
+          @media (max-width: 1200px) {
+            max-width: 360px;
+          }
+          @media (max-width: 768px) {
+            max-width: 320px;
+          }
+          @media (max-width: 568px) {
+            max-width: 280px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.us {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+  margin: 80px auto 0 auto;
+  &-title {
+    @include title-text;
+    text-align: left;
+    padding-left: 0.4%;
+    margin-top: 0;
+    margin-bottom: 29px;
+    @media (max-width: 768px) {
+      font-size: 39px;
+      line-height: 52px;
+    }
+    @media (max-width: 448px) {
+      font-size: 34px;
+      line-height: 38px;
+      margin-bottom: 12px;
+    }
+    @media (max-width: 368px) {
+      font-size: 26px;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+  }
+  &-us {
+    display: grid;
+    justify-content: space-between;
+    width: 100%;
+    grid-template-columns: repeat(4, minmax(235px, 285px));
+    grid-template-rows: auto;
+    grid-row-gap: 38px;
+    @media (max-width: 986px) {
+      grid-template-columns: repeat(3, minmax(235px, 285px));
+    }
+    @media (max-width: 768px) {
+      justify-content: center;
+      grid-template-columns: repeat(2, minmax(235px, 285px));
+      grid-row-gap: 14px;
+    }
+    @media (max-width: 486px) {
+      grid-template-columns: repeat(1, minmax(235px, 285px));
+    }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &--name {
+        margin-top: 0;
+        margin-bottom: 12px;
+        @include main-text;
+        @media (max-width: 768px) {
+          font-size: 16px;
+          margin-bottom: 0;
+        }
+        font-weight: 700;
+      }
+      &--prof {
+        @include main-text;
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
+      }
+      &--image {
+        max-width: 285px;
+        width: 100%;
+      }
+    }
+  }
+}

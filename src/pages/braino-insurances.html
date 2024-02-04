@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Braino WebPage</title>
+</head>
+<body>
+<header>
+    <nav class="nav">
+        <div class="nav-menu">
+            <img class="nav-menu__logo" src="../assets/images/nav-bar/logo.svg" alt="logo">
+            <ul class="nav-menu__links">
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="../../index.html">Acasă</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="./about-us.html">Despre noi</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="#">Misiune, viziune și valori</a>
+                </li>
+                <li class="nav-menu__links--item menu"><span>Funcționalități</span><span>
+                    <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.78037 5.8583L8.89304 0.766687C8.9617 0.681731 9 0.568861 9 0.451488C9 0.334114 8.9617 0.221245 8.89304 0.136289L8.8884 0.130807C8.85511 0.089479 8.81505 0.056571 8.77064 0.0340834C8.72624 0.0115957 8.67842 -9.25561e-07 8.6301 -9.21336e-07C8.58177 -9.17112e-07 8.53395 0.0115958 8.48955 0.0340834C8.44514 0.0565711 8.40508 0.089479 8.3718 0.130807L4.49923 4.92549L0.628206 0.130808C0.594923 0.0894797 0.55486 0.0565717 0.510454 0.0340841C0.466049 0.0115965 0.41823 -2.03432e-07 0.369905 -1.99207e-07C0.32158 -1.94983e-07 0.273761 0.0115965 0.229356 0.0340841C0.184951 0.0565718 0.144888 0.0894797 0.111605 0.130808L0.106958 0.13629C0.038301 0.221246 4.58347e-07 0.334115 4.68608e-07 0.451488C4.78869e-07 0.568862 0.038301 0.681732 0.106958 0.766688L4.21963 5.8583C4.25579 5.90308 4.29929 5.93872 4.34749 5.96308C4.39568 5.98744 4.44757 6 4.5 6C4.55243 6 4.60432 5.98744 4.65251 5.96308C4.70071 5.93872 4.74421 5.90308 4.78037 5.8583Z"
+                              fill="black"/>
+                    </svg>
+
+                </span>
+                    <ul class="nav-menu__links--item-ul">
+                        <li class="link-item"><a class="link-item__link" href="./braino-can.html">Ce poate să facă
+                            BrainO?</a></li>
+                        <li class="link-item"><a class="link-item__link" href="braino-insurances.html">Ce module conține
+                            BrainO?</a></li>
+                    </ul>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="#">Servicii</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="./contacts.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-lg">
+            <span class="nav-lg__item"><img src="../assets/images/nav-bar/langs-romanian.svg" alt="ro"></span>
+            <span class="nav-lg__item"><img src="../assets/images/nav-bar/langs-en.svg" alt="en"></span>
+        </div>
+    </nav>
+
+    <nav class="navigation" role="navigation">
+        <div class="nav-menu mobile">
+            <img class="nav-menu__logo" src="../assets/images/nav-bar/logo.svg" alt="logo">
+        </div>
+        <div id="menuToggle">
+            <!--
+            A fake / hidden checkbox is used as click reciever,
+            so you can use the :checked selector on it.
+            -->
+            <input type="checkbox"/>
+
+            <!--
+            Some spans to act as a hamburger.
+
+            They are acting like a real hamburger,
+            not that McDonalds stuff.
+            -->
+            <span class="elements"></span>
+            <span class="elements"></span>
+            <span class="elements"></span>
+
+            <!--
+            Too bad the menu has to be inside of the button
+            but hey, it's pure CSS magic.
+            -->
+            <ul class="nav-menu__links" id="menu">
+                <div class="nav-lg">
+                    <span class="nav-lg__item"><img src="../assets/images/nav-bar/langs-romanian.svg" alt="ro"></span>
+                    <span class="nav-lg__item"><img src="../assets/images/nav-bar/langs-en.svg" alt="en"></span>
+                </div>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="../../../braino-site/index.html">Acasă</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="./about-us.html">Despre noi</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="#">Misiune, viziune și valori</a>
+                </li>
+                <li class="nav-menu__links--item menu"><span>Funcționalități</span><span>
+                    <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.78037 5.8583L8.89304 0.766687C8.9617 0.681731 9 0.568861 9 0.451488C9 0.334114 8.9617 0.221245 8.89304 0.136289L8.8884 0.130807C8.85511 0.089479 8.81505 0.056571 8.77064 0.0340834C8.72624 0.0115957 8.67842 -9.25561e-07 8.6301 -9.21336e-07C8.58177 -9.17112e-07 8.53395 0.0115958 8.48955 0.0340834C8.44514 0.0565711 8.40508 0.089479 8.3718 0.130807L4.49923 4.92549L0.628206 0.130808C0.594923 0.0894797 0.55486 0.0565717 0.510454 0.0340841C0.466049 0.0115965 0.41823 -2.03432e-07 0.369905 -1.99207e-07C0.32158 -1.94983e-07 0.273761 0.0115965 0.229356 0.0340841C0.184951 0.0565718 0.144888 0.0894797 0.111605 0.130808L0.106958 0.13629C0.038301 0.221246 4.58347e-07 0.334115 4.68608e-07 0.451488C4.78869e-07 0.568862 0.038301 0.681732 0.106958 0.766688L4.21963 5.8583C4.25579 5.90308 4.29929 5.93872 4.34749 5.96308C4.39568 5.98744 4.44757 6 4.5 6C4.55243 6 4.60432 5.98744 4.65251 5.96308C4.70071 5.93872 4.74421 5.90308 4.78037 5.8583Z"
+                              fill="black"/>
+                    </svg>
+
+                </span>
+                    <ul class="nav-menu__links--item-ul">
+                        <li class="link-item"><a class="link-item__link" href="#">Ce poate să facă BrainO?</a></li>
+                        <li class="link-item"><a class="link-item__link" href="#">Ce module conține BrainO?</a></li>
+                    </ul>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="#">Servicii</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="./contacts.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<section class="section-can">
+    <img class="section-circle__left" alt="circle-left" src="../assets/images/functionalities-contains/circle-left.svg">
+    <img class="section-circle__right" alt="circle-right-left"
+         src="../assets/images/functionalities-contains/circle-right.svg">
+    <img class="section-circle" alt="circle-figure" src="../assets/images/functionalities-contains/circles-figure.svg"
+         style="top: 26.4%">
+    <img class="section-square" alt="square-figure" src="../assets/images/functionalities-contains/squares-figure.svg"
+         style="top: 72.8%">
+    <article class="can">
+        <h2 class="can-title">Ce module conține  <span>BrainO</span>?</h2>
+        <div class="can-cards">
+            <div class="can-cards__card">
+                <div class="can-cards__card--title">
+                    <div style="background-color: #beeffb">
+                        <div style="color: #00799e; border-color: #00799e">1</div>
+                    </div>
+                    <h6 class="card-name">Asigurări de viață</h6>
+                </div>
+                <div class="can-cards__card--text">
+                    <span>Asigurarea de viață, <span class="span-colors">asigurarea mixtă de viață</span>, planul de economisire pentru copil, <span
+                            class="span-colors">unit linked</span>, asigurări suplimentare <br> <span
+                            class="span-colors">cum recomanzi asigurarea potrivită</span></span>
+
+                </div>
+            </div>
+            <div class="can-cards__card">
+                <div class="can-cards__card--title">
+                    <div style="background-color: #ffe9d6">
+                        <div style="color: #e29a5c; border-color: #e29a5c">2</div>
+                    </div>
+                    <h6 class="card-name">Asigurări generale pentru familie</h6>
+                </div>
+                <div class="can-cards__card--text">
+                    <span>Asigurarea locuinței, <span class="span-colors">casco</span>, RCA, <span class="span-colors">asigurarea de accidente</span>,asigurarea de sănătate, <span
+                            class="span-colors">asigurarea de călătorie</span></span>
+                </div>
+            </div>
+            <div class="can-cards__card">
+                <div class="can-cards__card--title">
+                    <div style="background-color: #faecba">
+                        <div style="color: #e7b605; border-color: #e7b605">3</div>
+                    </div>
+                    <h6 class="card-name">Asigurări pentru afacere</h6>
+                </div>
+                <div class="can-cards__card--text">
+                    <span>Asigurarea afacerilor mici și medii (IMM), <span class="span-colors">
+                        asigurarea de întrerupere a afacerii (BI)</span>, asigurarea de tip "toate riscurile" pentru
+                        <br>
+                        aparatură electronică (EEI), <span class="span-colors">asigurări de răspundere civilă</span>,
+                        asigurări pentru angajați</span>
+                </div>
+            </div>
+            <div class="can-cards__card">
+                <div class="can-cards__card--title">
+                    <div style="background-color: #fde2e2">
+                        <div style="color: #dc8763; border-color: #dc8763">4</div>
+                    </div>
+                    <h6 class="card-name">Cum să crești numărul de clienți?</h6>
+                </div>
+                <div class="can-cards__card--text">
+                    <span>Ce să faci încât să te caute clienții, <span class="span-colors">cum să cauți tu clienți noi</span></span>
+                </div>
+            </div>
+            <div class="can-cards__card">
+                <div class="can-cards__card--title">
+                    <div style="background-color: #dcffed">
+                        <div style="color: #74aa73; border-color: #74aa73">5</div>
+                    </div>
+                    <h6 class="card-name">Cum să vinzi polițe clienților noi?</h6>
+                </div>
+                <div class="can-cards__card--text">
+                    <span><span class="span-colors">Cum abordezi telefonic clienții</span>, cum să pregătești vizita la client,
+                        <span class="span-colors">cum conștientizezi clienții asupra nevoilor de asigurare</span>,
+                        cum le comunici clienților soluțiile de asigurare, <span class="span-colors">
+                            cum rezolvi obiecțiile</span>, cum finalizezi vânzarea.</span>
+                </div>
+            </div>
+            <div class="can-cards__card">
+                <div class="can-cards__card--title">
+                    <div style="background-color: #beeffb">
+                        <div style="color: #00799e; border-color: #00799e">6</div>
+                    </div>
+                    <h6 class="card-name">Cum să vinzi polițe noi clienților vechi?</h6>
+                </div>
+                <div class="can-cards__card--text">
+                    <span>Cui poți să vinzi alte polițe, <span class="span-colors">cui poți să vinzi mai ușor alte polițe</span>,
+                        care este momentul oportun să abordezi clienții vechi, <span class="span-colors">
+                          <br>  cum poți aborda clienții vechi  pentru a le vinde polițe noi</span>, cum poți să vinzi
+                        clienților vechi polițe noi</span>
+                </div>
+            </div>
+            <div class="can-cards__card">
+                <div class="can-cards__card--title">
+                    <div style="background-color: #faecba">
+                        <div style="color: #e7b605; border-color: #e7b605">7</div>
+                    </div>
+                    <h6 class="card-name">Îndrumare</h6>
+                </div>
+                <div class="can-cards__card--text">
+                    <span>Ce să înveți la începutul carierei, <span class="span-colors">ce acțiuni de vânzare să faci
+                        la începutul carierei</span>, cum să lucrezi dacă ești intermediar part-time,
+                        <span class="span-colors">cum să lucrezi dacă ești intermediar full-time</span></span>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer class="footer" style="padding-bottom: 40px; max-width: 1190px">
+        <div class="footer-links">
+            <h6 class="footer-links__title">Links</h6>
+            <ul class="footer-links__list">
+                <li class="footer-links__list--item">
+                    <a class="item-link" href="#">Terms and Conditions</a>
+                </li>
+                <li class="footer-links__list--item">
+                    <a class="item-link" href="#">Privacy Policy</a>
+                </li>
+                <li class="footer-links__list--item">
+                    <a class="item-link" href="#">Cookie Policy</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-info">
+            <h6 class="footer-info__title">BrainO</h6>
+            <span class="footer-info__info">Asistent virtual inteligent pentru forța de vânzări din asigurări</span>
+        </div>
+        <div class="footer-us">
+            <h6 class="footer-us__title">Follow Us</h6>
+            <div class="footer-us__social">
+                <a class="footer-us__social--link" href="#">
+                    <img src="../assets/images/contacts/linked-in.svg">
+                </a>
+                <a class="footer-us__social--link" href="#">
+                    <img src="../assets/images/contacts/facebook.svg">
+                </a>
+                <a class="footer-us__social--link" href="#">
+                    <img src="../assets/images/contacts/youtube.svg">
+                </a>
+                <a class="footer-us__social--link" href="#">
+                    <img src="../assets/images/contacts/instagram.svg">
+                </a>
+            </div>
+        </div>
+    </footer>
+</section>
+

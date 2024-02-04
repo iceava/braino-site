@@ -1,0 +1,73 @@
+@import "mixins";
+.can-cards__card {
+  &:nth-of-type(1) {
+    .can-cards__card--title > .card-name {
+      color: $primary-color;
+    }
+    .can-cards__card--text {
+      .span-colors {
+        color: $primary-color;
+      }
+    }
+  }
+  &:nth-of-type(2) {
+    .can-cards__card--title > .card-name {
+      color: #f6814e;
+    }
+    .can-cards__card--text {
+      .span-colors {
+        color: #f6814e;
+      }
+    }
+  }
+  &:nth-of-type(3) {
+    .can-cards__card--title > .card-name {
+      color: #e7b605;
+    }
+    .can-cards__card--text {
+      .span-colors {
+        color: #e7b605;
+      }
+    }
+  }
+  &:nth-of-type(4) {
+    .can-cards__card--title > .card-name {
+      color: #dc8763;
+    }
+    .can-cards__card--text {
+      .span-colors {
+        color: #dc8763;
+      }
+    }
+  }
+  &:nth-of-type(5) {
+    .can-cards__card--title > .card-name {
+      color: #74aa73;
+    }
+    .can-cards__card--text {
+      .span-colors {
+        color: #74aa73;
+      }
+    }
+  }
+  &:nth-of-type(6) {
+    .can-cards__card--title > .card-name {
+      color: #00799e;
+    }
+    .can-cards__card--text {
+      .span-colors {
+        color: #00799e;
+      }
+    }
+  }
+  &:nth-of-type(7) {
+    .can-cards__card--title > .card-name {
+      color: #e7b605;
+    }
+    .can-cards__card--text {
+      .span-colors {
+        color: #e7b605;
+      }
+    }
+  }
+}

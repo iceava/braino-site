@@ -69,6 +69,7 @@
           background-color: white;
           box-shadow: 2px 2px 4px 2px rgba(230, 233, 234, 0.35);
           display: none;
+          z-index: 9999;
 
           @media (max-width: 768px) {
             top: 39px;
@@ -93,10 +94,10 @@
               height: 4px;
               position: absolute;
               left: -4px;
-              top: 18px !important;
+              top: 14px !important;
 
               @media (max-width: 768px) {
-                top: 24px;
+                top: 16.8px !important;
               }
             }
 

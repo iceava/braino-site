@@ -29,7 +29,7 @@
 
   &-items {
     display: flex;
-    gap: 64px;
+    gap: 40px;
     justify-content: space-between;
     margin-top: 24px;
 
@@ -156,11 +156,14 @@
         &__message {
           border-radius: 18px;
           background: #FFF;
+          padding: 18px 23px;
           box-shadow: 0 3px 20px 0 rgba(8, 15, 52, 0.06);
           max-width: 594px;
-          width: 100%;
           border: none;
           height: 182px;
+          &::placeholder {
+            font-size: 18px;
+          }
         }
 
         &__button {

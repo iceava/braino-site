@@ -3,20 +3,45 @@
   justify-content: space-between;
   padding: 80px 0;
   max-width: 1200px;
+  @media (max-width: 568px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+  gap: 14px;
   margin: 0 auto;
   &-links {
     display: flex;
     flex-direction: column;
     gap: 14px;
+    @media (max-width: 568px) {
+      max-width: 460px;
+      width: 100%;
+    }
+    @media (max-width: 486px) {
+      gap: 12px;
+    }
     &__title {
       @include footer-title;
       margin: 0;
+      @media (max-width: 448px) {
+        font-size: 18px;
+      }
     }
     &__list {
       display: flex;
       justify-content: space-between;
       margin: 0;
       padding: 0;
+      @media (max-width: 986px) {
+        flex-direction: column;
+        gap: 0;
+      }
+      @media (max-width: 568px) {
+        flex-direction: row;
+        gap: 14px;
+      }
       gap: 16px;
       &--item {
         list-style-type: none;
@@ -30,11 +55,24 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+    @media (max-width: 486px) {
+      gap: 12px;
+    }
+    @media (max-width: 568px) {
+      max-width: 460px;
+      width: 100%;
+    }
     &__title {
       font-family: Segoe UI Variable;
       font-size: 32px;
       text-align: center;
       line-height: 24px;
+      @media (max-width: 568px) {
+        text-align: left;
+      }
+      @media (max-width: 448px) {
+        font-size: 20px;
+      }
       letter-spacing: 0;
       margin: 0;
       font-weight: 700;
@@ -47,12 +85,25 @@
     display: flex;
     flex-direction: column;
     gap: 14px;
+    @media (max-width: 486px) {
+      gap: 12px;
+    }
+    @media(max-width: 568px) {
+      max-width: 460px;
+      width: 100%;
+    }
     &__title {
       @include footer-title;
+      @media (max-width: 448px) {
+        font-size: 18px;
+      }
       margin: 0;
     }
     &__social {
       display: flex;
+      @media (max-width: 568px) {
+        justify-content: center;
+      }
       gap: 8px;
       &--link {
         text-decoration: none;
