@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Braino WebPage</title>
+    <style>
+        p, h4 {
+            font-size: 18px;
+        }
+        h2 {
+            text-align: left;
+        }
+        @media (max-width: 768px) {
+            p, h4 {
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 468px) {
+            p, h4 {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="nav">
+        <div class="nav-menu">
+            <img class="nav-menu__logo" src="../assets/images/nav-bar/logo.svg" alt="logo">
+            <ul class="nav-menu__links">
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="../../index.html">Acasă</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="./about-us.html">Despre noi</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="../../index.html#mission">Misiune, viziune și valori</a>
+                </li>
+                <li class="nav-menu__links--item menu"><span>Funcționalități</span><span>
+                    <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.78037 5.8583L8.89304 0.766687C8.9617 0.681731 9 0.568861 9 0.451488C9 0.334114 8.9617 0.221245 8.89304 0.136289L8.8884 0.130807C8.85511 0.089479 8.81505 0.056571 8.77064 0.0340834C8.72624 0.0115957 8.67842 -9.25561e-07 8.6301 -9.21336e-07C8.58177 -9.17112e-07 8.53395 0.0115958 8.48955 0.0340834C8.44514 0.0565711 8.40508 0.089479 8.3718 0.130807L4.49923 4.92549L0.628206 0.130808C0.594923 0.0894797 0.55486 0.0565717 0.510454 0.0340841C0.466049 0.0115965 0.41823 -2.03432e-07 0.369905 -1.99207e-07C0.32158 -1.94983e-07 0.273761 0.0115965 0.229356 0.0340841C0.184951 0.0565718 0.144888 0.0894797 0.111605 0.130808L0.106958 0.13629C0.038301 0.221246 4.58347e-07 0.334115 4.68608e-07 0.451488C4.78869e-07 0.568862 0.038301 0.681732 0.106958 0.766688L4.21963 5.8583C4.25579 5.90308 4.29929 5.93872 4.34749 5.96308C4.39568 5.98744 4.44757 6 4.5 6C4.55243 6 4.60432 5.98744 4.65251 5.96308C4.70071 5.93872 4.74421 5.90308 4.78037 5.8583Z"
+                              fill="black"/>
+                    </svg>
+
+                </span>
+                    <ul class="nav-menu__links--item-ul">
+                        <li class="link-item"><a class="link-item__link" href="./braino-can.html">Ce poate să facă
+                            BrainO?</a></li>
+                        <li class="link-item"><a class="link-item__link" href="braino-insurances.html">Ce module conține
+                            BrainO?</a></li>
+                    </ul>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="./services.html">Servicii</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="./contacts.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-lg">
+            <span class="nav-lg__item"><img src="../assets/images/nav-bar/langs-romanian.svg" alt="ro"></span>
+            <span class="nav-lg__item"><img src="../assets/images/nav-bar/langs-en.svg" alt="en"></span>
+        </div>
+    </nav>
+
+    <nav class="navigation" role="navigation">
+        <div class="nav-menu mobile">
+            <img class="nav-menu__logo" src="../assets/images/nav-bar/logo.svg" alt="logo">
+        </div>
+        <div id="menuToggle">
+            <!--
+            A fake / hidden checkbox is used as click reciever,
+            so you can use the :checked selector on it.
+            -->
+            <input type="checkbox"/>
+
+            <!--
+            Some spans to act as a hamburger.
+
+            They are acting like a real hamburger,
+            not that McDonalds stuff.
+            -->
+            <span class="elements"></span>
+            <span class="elements"></span>
+            <span class="elements"></span>
+
+            <!--
+            Too bad the menu has to be inside of the button
+            but hey, it's pure CSS magic.
+            -->
+            <ul class="nav-menu__links" id="menu">
+                <div class="nav-lg">
+                    <span class="nav-lg__item"><img src="../assets/images/nav-bar/langs-romanian.svg" alt="ro"></span>
+                    <span class="nav-lg__item"><img src="../assets/images/nav-bar/langs-en.svg" alt="en"></span>
+                </div>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="../../../braino-site/index.html">Acasă</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="./about-us.html">Despre noi</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="../../../index.html#mission">Misiune, viziune și
+                        valori</a>
+                </li>
+                <li class="nav-menu__links--item menu"><span>Funcționalități</span><span>
+                    <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.78037 5.8583L8.89304 0.766687C8.9617 0.681731 9 0.568861 9 0.451488C9 0.334114 8.9617 0.221245 8.89304 0.136289L8.8884 0.130807C8.85511 0.089479 8.81505 0.056571 8.77064 0.0340834C8.72624 0.0115957 8.67842 -9.25561e-07 8.6301 -9.21336e-07C8.58177 -9.17112e-07 8.53395 0.0115958 8.48955 0.0340834C8.44514 0.0565711 8.40508 0.089479 8.3718 0.130807L4.49923 4.92549L0.628206 0.130808C0.594923 0.0894797 0.55486 0.0565717 0.510454 0.0340841C0.466049 0.0115965 0.41823 -2.03432e-07 0.369905 -1.99207e-07C0.32158 -1.94983e-07 0.273761 0.0115965 0.229356 0.0340841C0.184951 0.0565718 0.144888 0.0894797 0.111605 0.130808L0.106958 0.13629C0.038301 0.221246 4.58347e-07 0.334115 4.68608e-07 0.451488C4.78869e-07 0.568862 0.038301 0.681732 0.106958 0.766688L4.21963 5.8583C4.25579 5.90308 4.29929 5.93872 4.34749 5.96308C4.39568 5.98744 4.44757 6 4.5 6C4.55243 6 4.60432 5.98744 4.65251 5.96308C4.70071 5.93872 4.74421 5.90308 4.78037 5.8583Z"
+                              fill="black"/>
+                    </svg>
+
+                </span>
+                    <ul class="nav-menu__links--item-ul">
+                        <li class="link-item"><a class="link-item__link" href="./braino-can.html">Ce poate să facă
+                            BrainO?</a></li>
+                        <li class="link-item"><a class="link-item__link" href="./braino-insurances.html">Ce module
+                            conține BrainO?</a></li>
+                    </ul>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="./services.html">Servicii</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="./contacts.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<section>
+    <article class="terms" style="padding: 0 24px; text-align: justify">
+        <h2 class="terms-title">Termeni și condiți</h2>
+        <p>Utilizarea acestui site de către dumneavoastră este condiționată de respectarea termenilor și condițiilor
+            generale detaliate mai jos. Dacă alegeți să vizitați site-ul și să accesați serviciile puse la dispoziție
+            prin intermediul site-ului, vă asumați cunoașterea și acceptarea în totalitate a acestor termeni și
+            condiții, care stau la baza contractului dintre Societate și dumneavoastră.
+        </p>
+        <p>Platforma braino.group este deținută de către BRAINO SRL, cu sediul social în Municipiul Brașov, str. 13
+            Decembrie, nr. 48, ap. 2, județ Brșov, înmatriculată la Oficiul Registrului Comerțului de pe lângă
+            Tribunalul Brașov sub nr. J8/1297/2023, având CUI 48100730, email contact@braino.group. Pentru facilitarea
+            transmiterii informațiilor, vom avea în vederea utilizarea termenului de „Societate” pentru a ne referi la
+            BRAINO SRL, respectiv termenii „braino.group” sau „site” pentru a ne referi la Platforma braino.group.
+        </p>
+        <h4>1. Ce este braino.group</h4>
+        <p>Braino.group este o platformă creată pentru facilitarea accesului online al publicului la cursuri și
+            materiale educaționale pe nișa asigurărilor, în special cu privire la dezvoltarea abilităților de
+            antreprenoriat și dezvoltare a afacerilor, explicitate ca atare pe site. 
+        </p>
+        <p>Societatea va întreprinde toate acțiunile necesare pentru a pune la dispoziție clienților materiale cât mai
+            calitative, actuale și relevante domeniului care face obiectul cursului. 
+        </p>
+        <p>
+            În acest scop și pentru a asigura o gestionare eficientă a materialelor de pe site, societatea își rezervă
+            dreptul de a elimina materialele care nu mai prezintă interes, care au fost înlocuite cu materiale
+            actualizate, care nu vor mai atinge un anumit standard calitativ, care din orice alte asemenea motive vor fi
+            considerate neoportune ori pentru care a expirat dreptul de difuzare stabilit. Prin urmare, societatea nu
+            garantează menținerea constantă a tuturor materialelor pe braino.group.
+        </p>
+        <p>
+            Înaintea ștergerii unui curs, Braino va comunica clienților acest aspect prin intermediul canalelor de
+            comunicare email și/sau sms și va oferi o perioadă de grație de la prima comunicare și până la eliminarea
+            conținutului în cauză.
+        </p>
+        <p>Vă informăm că platforma BRAINO îndeplinește toate condițiile de conformitate, aceasta fiind în acord cu
+            cerințele impuse de OUG nr. 141 din 28 decembrie 2021 privind anumite aspecte referitoare la contractele de
+            furnizare de conținut digital și de servicii digitale. 
+        </p>
+        <p>BRAINO funcționează în termeni optimi și este compatibilă cu majoritatea navigatoarelor de internet (Google
+            Chrome, Safari, Mozilla Firefox si Microsoft Edge). Cu toate acestea, Societatea nu poate garanta
+            compatibilitatea Platformei cu toate echipamentele informatice, sistemele sau programe folosite de
+            Utilizator, mai ales în situația în care nu sunt instalate ultimele actualizări a respectivelor
+            sisteme/programe.
+        </p>
+        <p>De asemenea, Societatea nu poate asigura accesul la conținutul Platformei în acele țări în care accesul
+            populației la conținuturile multimedia este restricționat, limitat sau blocat prin acte guvernamentale ori
+            prin legislația specifică, iar aceste restricții/limitări vizează inclusiv conținuturile, tehnologia
+            utilizată, furnizorii de servicii ori instrumentele media de prezentare a acestora pe Platformă.
+        </p>
+        <p>Serviciile oferite prin intermediul site-ului sunt exclusiv cele aferente domeniilor de activitate prezentate
+            pe prima pagină a site-ului. Pentru mai multe informații legate de serviciile disponibile pe
+            Platformă,precum conținutul acestora, modalitatea de operare, preț etc. vă rugăm să verificați descrierea
+            fiecărui serviciu prezentat pe site.
+        </p>
+        <p>Vă rugăm să țineți cont de faptul că serviciile pe care le puteți accesa prin intermediul site-ului nu
+            reprezintă consultanță fiscală, contabilă, juridică sau altele asemenea și nu înlocuiesc serviciile de
+            specialitate din astfel de domenii recomandate pentru orice antreprenor.
+        </p>
+        <p>Utilizatorii care achiziționează sau care au activ un abonament Premium disponibil pe site au posibilitatea
+            de a descărca și de a utiliza inclusiv aplicația BRAINO Offline, disponibilă în magazinele Google Play și
+            Apple Store. Precizăm că, achiziționarea și utilizarea aplicației BRAINO Offline, este condiționată de
+            respectarea termenilor și condițiilor Google, respectiv Apple, motiv pentru care vă recomandăm să citiți cu
+            atenție termenii și condițiile menționate.
+        </p>
+        <p>
+            În cazul în care alegeți să descărcați aplicația BRAINO Offline din Apple Store și doriți să achiziționați
+            un abonament Premium direct în aplicație, vă informăm asupra faptului că plata se va face direct în
+            conturile Apple, astfel că vă supuneți condițiilor de plată ale Apple. Aveți obligația de a verifica aceste
+            condiții mai înainte de efectuarea unei plăți. Dispozițiile art. 4 din prezenții Termeni și condiții nu se
+            aplică în cazul aplicației BRAINO achiziționată din magazinele Apple Store.
+        </p>
+        <h4>2. Condiții pentru utilizarea site-ului</h4>
+        <p>Pentru a putea accesa produsele și serviciile puse la dispoziție prin intermediul site-ului, trebuie să vă
+            creați un cont personal pe site. În acest scop, vă rugăm să utilizați butonul „Creeaza un cont” de pe pagina
+            principală a site-ului și să parcurgeți în mod adecvat pașii necesari în vederea creării contului. Aveți
+            obligația de a furniza informațiile care vă sunt solicitate și de a completa toate câmpurile în mod adecvat,
+            complet, corect și real, așa cum acestea apar specificate în cuprinsul documentului de identitate. 
+        </p>
+        <p>Contul poate fi accesat pe bază de parolă de acces, pe care o cunoașteți doar dumneavoastră. Sunteți pe
+            deplin responsabil pentru păstrarea în siguranță a parolei de acces precum și a oricărei informații privind
+            înregistrarea, autentificarea și contul. Un cont de utilizator asigură accesul în program în favoarea unei
+            singure persoane. Aveți obligația de a nu transmite datele dumneavoastră de autentificare în favoarea unei
+            terțe persoane. 
+        </p>
+        <p>Poate să își creeze un cont pe site orice persoană fizică, indiferent de naționalitate, cu vârsta minimă de
+            18 ani împliniți la data creării contului. Nu permitem cu bună știință persoanelor sub vârsta de 18 ani
+            crearea de Conturi care să permită accesul la site. Orice accesare a site-ului de către minori direct sau
+            prin intermediul tutorilor/reprezentanților legali se face pe propria răspundere a acestora. 
+        </p>
+        <p>Site-ul poate fi utilizat doar pentru vizionare, creare cont, accesare cont personal, accesare
+            produse/servicii existente pe site, pentru evaluarea și pentru recomandarea serviciilor noastre. Site-ul
+            nostru nu poate fi utilizat pentru a se face vreo plată ilegală, frauduloasă, pentru a se posta sau
+            transmite vreun material cu conținut defăimător, amenințător, obscen, indecent, instigator și altele
+            asemenea. Ne rezervăm dreptul de a nu permite postarea și/sau de a șterge imediat și fără vreo notificare
+            prealabilă orice comentariu de pe site care conține un limbaj nepotrivit, erori grave de scriere sau care ar
+            putea să ne aducă un prejudiciu de imagine și/sau să ne creeze o stare de disconfort, nouă, autorilor
+            materialelor de pe site sau clienților și vizitatorilor. Sunteți pe deplin responsabil pentru orice
+            operațiune și/sau plată efectuată din cont prin utilizarea site-ului.
+        </p>
+        <p>Nu putem garanta utilizarea discontinuă și neîntreruptă a site-ului. Este posibil să intervină erori,
+            defecte, viruși sau alte comportamente dăunătoare pe site sau pe servere care să îl facă indisponibil. Vom
+            lua toate măsurile pentru a limita și pentru a înlătura asemenea evenimente neplăcute în cel mai scurt timp
+            posibil. Nu aveți dreptul să interveniți în operarea site-ului nostru și nici să luați vreo măsură de
+            intervenție asupra echipamentului nostru informatic, indiferent de motiv și indiferent de rezultatul
+            obținut. 
+        </p>
+        <p>Ne rezervăm dreptul de a desființa site-ul fără o notificare prealabilă a utilizatorilor. Ne rezervăm dreptul
+            de a ne stabili în mod liber relațiile de colaborare cu persoanele specializate care vor participa la
+            crearea diverselor materiale de pe braino.group și nu ne asumăm faptul că aceste persoane vor avea o
+            prezență constantă pe site.
+        </p>
+        <h4>3. Cum devii utilizator braino.group</h4>
+        <p>Orice client care dorește acest lucru poate să se înregistreze pe site-ul nostru accesând butonul „Vreau sa
+            fiu membru BRAINO”, disponibil pe pagina principală, urmat de un simplu click pe butonul de Creează un cont,
+            cu parcurgerea adecvată a pașilor solicitați în vederea înregistrării. 
+        </p>
+        <p>Pentru înregistrare, vi se va solicita să vă introduceți numele, prenumele, adresa de email și parola,
+            numărul de telefon, statutul profesional și regiunea. Aveți obligația de a introduce o adresă de email
+            validă, în caz contrar nu va fi posibilă continuarea procedurii de înregistrare pe site. Sunteți pe deplin
+            responsabil pentru păstrarea în siguranță a parolei de acces precum și a oricărei informații privind
+            înregistrarea, autentificarea și contul. Sunteți pe deplin responsabil pentru orice plată efectuată prin
+            utilizarea site-ului nostru din contul dumneavoastră. Aveți posibilitatea de vă da acordul pentru primirea
+            de newslettere. În acest mod veți fi la curent cu activitatea noastră pe site. 
+        </p>
+        <p>De asemenea, puteți deveni utilizator braino.group și în cazul în care sunteți unul dintre beneficiarii unui
+            abonament de grup contractat de către angajatorul dumneavoastră. 
+        </p>
+        <p>Odată înregistrați pe braino.group, veți avea posibilitatea să achiziționați diverse produse și servicii
+            prezentate pe site, precum abonamente de acces pe Platforma BRAINO sau diferite cursuri și materiale
+            educaționale.
+        </p>
+        <p>După achiziționarea produselor și inregistrarea cu succes a platii acestora, veți putea accesa produsele
+            astfel achiziționate direct din contul dumneavoastră BRAINO într-un termen de maximum 20 minute.
+        </p>
+        <p>Menționăm că nu aveți posibilitatea achiziționării produselor existente pe site pentru a le oferi cadou altor
+            persoane.  
+        </p>
+        <h4>4. Plata si facturarea</h4>
+        <p>Prețurile afișate pe site, la fiecare  produs în parte, nu includ valoarea TVA, care se va adăuga la valoarea
+            produselor în condițiile legii fiscale. 
+        </p>
+        <p>Produsele tip abonament expuse pe site cuprind următoarele servicii, care vor fi menționate distinct în
+            cuprinsul facturii:
+        </p>
+        <p>
+            - acordare acces la platforma BRAINO și implicit la conținutul existent pe platformă la data achiziționării
+            abonementului (80% din valoarea abonamentului); <br>
+            - acordare acces la conținutul ce urmează a fi publicat pe platforma BRAINO ulterior achiziționării
+            abonamentului, pe întreaga perioadă a acestuia (20% din valoarea abonamentului).
+        </p>
+        <p>Plata produselor se efectuează în lei și se poate face prin oricare dintre următoarele modalități:
+        </p>
+        <h5>4.1  online, cu cardul, prin sistemul: Netopia urmând pașii de plată și instrucțiunile de plată oferite cu
+            ocazia efectuării plății.</h5>
+        <p>Pentru a vă informa cu privire la politica de confidențialitate a acestor operatori puteți accesa următoarea
+            legătură pentru Netopia: https://netopia-payments.com/politica-de-confidentialitate/.
+        </p>
+        <p>
+            Nu suntem responsabili pentru procesarea în mod eronat a plății în niciuna dintre modalitățile de plată
+            prezentate mai sus. Nu suntem responsabili pentru erorile înregistrate prin intermediul sistemului de
+            plată. 
+        </p>
+        <p>Clientul are obligația de a opta pentru modalitatea de plată aleasă la momentul selectării produsului dorit,
+            prin bifarea opțiunii corespunzătoare, conform pașilor de achiziționare a produselor. În cazul
+            abonamentelor, este posibil să beneficiați de diverse discounturi sau alte beneficii pentru achitarea
+            abonamentului pentru mai multe luni în avans. Aceste beneficii vor fi aduse la cunoștința publicului prin
+            publicarea pe site și prin mijloacele de promovare alese de către Societate.
+        </p>
+        <p>Odată ales tipul de abonament și selectată modalitatea de plată, plata este recurentă. Clientul nu trebuie să
+            parcurgă o procedură lunară sau anuală de plată, sumele aferente abonamentului urmând a fi debitate automat
+            din contul Clientului, la începutul fiecărei perioade de abonament. Clientul înțelege și este de acord cu
+            faptul că sumele reprezentând abonamentul achiziționat pot varia de la o lună la alta în funcție de diverse
+            promoții, reduceri acordate Clientului în unele luni de abonament sau în funcție de alte modificări a
+            prețului aferent abonamentului.
+        </p>
+        <p>
+            Abonamentul clientului are activată plata recurentă automat. Asta înseamnă că la data scadentă a
+            abonamentului se va efectua automat plata de pe cardul introdus la prima comandă. Recurența se poate opri în
+            orice moment, cu un singur click din contul clientului. 
+        </p>
+        <p>Societatea va emite Clientului o factură fiscală pentru produsele achiziționate de pe site, scop în care
+            Clientul va furniza Societății toate informațiile necesare.
+        </p>
+        <p>
+            Plata recurentă se aplică exclusiv în cazul abonamentelor achiziționate de pe site în beneficiul dvs.,
+            neaplicându-se în situația în care ați achiziționat abonamentul pentru o altă persoană, conform art. 3 din
+            prezentul Contract sau alte produse disponibile pe site.
+        </p>
+        <p>
+            Factura fiscală pentru orice comandă (inclusiv pentru plățile recurente) va putea fi regăsită în contul
+            clientului și descărcată de acolo. Odată emisă, o factură nu poate fi modificată.
+        </p>
+        <h4>5. Garanția și dreptul de retragere</h4>
+        <p>Pentru că ne dorim clienți mulțumiți, societatea acordă garanții speciale pentru serviciile oferite prin
+            intermediul site-ului, pe care le puteți accesa fără dificultăți birocratice, cu o simplă notificare a
+            biroului nostru de vânzări, prin email la adresa suport@braino.group. Operatorii noștri vor prelua și
+            procesa notificarea dvs. în cel mai timp scurt posibil, astfel încât să vă puteți recupera cu celeritate
+            banii plătiți pentru serviciile de care nu sunteți mulțumit pe deplin. În vederea returnării banilor, este
+            posibil să vi se solicite furnizarea de date necesare în acest scop (cont IBAN, bancă, cod swift, titular
+            cont, alte informații). În cazul în care nu furnizați datele solicitate, ne vom găsi în imposibilitatea de a
+            vă returna banii. 
+        </p>
+        <p>
+            Oferim o garanție de 100%, însemnând că, în ipoteza în care, într-un termen de 14 de zile de la asigurarea
+            accesului pe site, nu sunteți satisfăcut de braino.group, vă puteți retrage din Contract și primiți banii
+            înapoi, urmând a vi se șterge contul de acces la site. 
+        </p>
+        <p>
+            Dreptul de retragere din contract operează în termen de 14 de zile calendaristice calculat de la data
+            înregistrării pe site și poate fi folosit o singură dată. Mai exact, nu permitem crearea de conturi
+            succesive, cu retrageri succesive și returnarea costului abonamentului în favoarea aceluiași utilizator.
+            Țineți cont de faptul că braino.group este un site de servicii, existente pe site la momentul la care vă
+            înrolați, iar potrivit art. 16 lit. a) din OUG 34/2014, actualizată, sunt exceptate de la dreptul de
+            retragere contractele de prestări de servicii, după prestarea completă a serviciilor, dacă executarea a
+            început cu acordul prealabil expres al consumatorului şi după ce acesta a confirmat că a luat cunoştinţă de
+            faptul că îşi va pierde dreptul la retragere după executarea completă a contractului de către
+            profesionist. În cazul în care doriți să apelați la dreptul de retragere, nu trebuie decât să ne comunicați
+            intenția dumneavoastră neechivocă prin email la suport@braino.group. Vă rugăm să ne comunicați datele
+            dumneavoastră complete, tipul abonamentelor la care doriți să renunțați și prețul acestora, precum și, dacă
+            optați pentru modalitatea de rambursare a sumei plătite în cont, datele de cont în care doriți să vi se
+            ramburseze suma plătită. 
+        </p>
+        <p>
+            În cel mai scurt timp, veți primi prin email o confirmare a înregistrării cererii dumneavoastră de
+            retragere. Cererea de retragere va fi primită numai dacă respectați termenul de 14 zile calendaristice de la
+            data înregistrării . 
+        </p>
+        <p>
+            Totodată, garanția și implicit, cererea de retragere, vor fi admise doar în ipoteza în care nu ați mai
+            înregistrat nicio cerere în acest sens pe braino.group. 
+        </p>
+        <p>Optarea pentru retragerea de pe site implică ștergerea contului de acces pe braino.group.
+        </p>
+        <p>
+            Prin excepție de la prevederile menționate mai sus, avem posibilitatea să acordăm o garanție mai extinsă în
+            cazul unor campanii punctuale desfășurate de Societate, situație în care, pe lângă condițiile generale din
+            prezentul document, vor fi avute în vedere și condițiile speciale de acordare a garanției prevăzute în
+            anunțul public referitor la campania desfășurată. În caz de divergență, condițiile speciale de acordare a
+            garanției vor prevala celor generale prevăzute în prezentul document. Condițiile speciale de acordare a
+            garanției se vor aplica exclusiv pe perioada de desfășurare a campaniei.
+        </p>
+        <p>Vă informăm că prezenta secțiune nu se aplică cu privire la celelalte produse cu conținut digital pe care le
+            puteți achiziționa de pe platformă, precum materiale sau cursuri educaționale, pentru care Societatea nu
+            oferă posibilitatea retragerii.
+        </p>
+        <p>De asemenea, prezenta secțiune nu se aplică, iar restituirea prețului achitat nu mai este posibilă în cazul
+            în care ați efectuat plata în criptomonede.
+        </p>
+        <p>Astfel, în aceste cazuri, la momentul plasării comenzii Clientul își exprimă acordul prealabil expres pentru
+            începerea executării contractului. Clientul declară că înțelege și confirmă faptul că după executarea
+            completă a contractului nu beneficiază de dreptul de retragere potrivit art. 16 lit. a) din O.U.G 34/2014,
+            deoarece serviciile prestate sunt exceptate de la dreptul de retragere.
+        </p>
+        <p>Serviciile se consideră prestate complet la momentul la care vă sunt transmise materialele comandate,
+            respectiv la momentul la care aveți acces la conținutul Platformei.
+        </p>
+        <h4>6. Răspundere și Limitări</h4>
+        <p>Prin crearea și utilizarea Contului, vă asumați răspunderea pentru menținerea confidențialității datelor de
+            Cont (user și parola) și pentru gestionarea accesării Contului, fiind responsabil în condițiile legii de
+            activitatea derulata prin intermediul Contului. 
+        </p>
+        <p>Prin accesarea site-ului, crearea Contului și utilizarea site-ului acceptați în mod expres și neechivoc
+            Termenii și condițiile site-ului în ultima sa versiune comunicată în cadrul site-ului. Ulterior creării
+            Contului, utilizarea conținutului echivalează cu acceptarea modificărilor intervenite asupra Termenilor și
+            condițiilor site-ului și/sau a versiunilor actualizate ale Termenilor și Condițiilor Site-ului. Sunteți
+            responsabil pentru verificarea versiunii finale a Termenilor și Condițiilor ori de câte ori utilizați
+            site-ul. 
+        </p>
+        <p>Acceptarea Termenilor și condițiilor site-ului se confirmă prin bifarea checkboxului corespunzător din site
+            și/sau prin trimiterea Comenzii și/sau prin efectuarea unei plăți online. 
+        </p>
+        <p>Societatea nu își asumă răspunderea pentru nici un fel de pierdere (materială, financiară, de date sau
+            informații) care poate sa apară direct sau indirect din cauza informațiilor incluse pe sit sau a
+            nefuncționării sau funcționarii necorespunzătoare a acestui site.
+        </p>
+        <p>
+            Nu putem fi responsabili pentru daune aduse calculatorului dumneavoastră sau viruși care ar putea să vă
+            infecteze calculatorul sau alt echipament ca urmare a accesării, utilizării de către dumneavoastră sau
+            navigării pe site-ul nostru sau descărcarea de către dumneavoastră a vreunui conținut, informație,
+            materiale, date, text, imagini, video sau audio de pe site-ul nostru. 
+        </p>
+        <p>Nu suntem responsabili pentru orice prejudiciu, pierdere, revendicare, daune indirecte, incidente sau de
+            consecință de orice tip, care decurge din sau are în vreun fel legătură cu orice utilizare a site-ului
+            nostru sau a conținutului, datelor, materialelor sau informațiilor găsite în acesta, cu orice neîndeplinire
+            sau întârziere (inclusiv fără limitare utilizarea sau incapacitatea de a utiliza orice componentă a acestui
+            site pentru achiziționare sau plată), sau executarea sau neexecutarea de către noi sau de către orice
+            furnizor, chiar dacă noi sau furnizorul nostru am fost avizați de posibilitatea de daune aduse acestor părți
+            sau oricărei alte părți. 
+        </p>
+        <p>Această exonerare de răspundere se aplică oricăror daune sau prejudicii cauzate de orice lipsă a
+            performanței, eroare, omisiune, întrerupere, eliminare, defect, întârziere în operare sau transmisie, virus
+            de calculator, defecțiune a liniei de comunicare, furt sau distrugere sau acces neautorizat la, modificarea,
+            sau utilizarea înregistrării, fie pentru încălcarea contractului, comportament dăunător, neglijență, sau în
+            baza oricărei cauze de acțiune.
+        </p>
+        <h4>7. Reclamații</h4>
+        <p>Orice nemulțumire legată de accesarea, utilizarea, înregistrarea pe site-ul nostru, efectuarea unei comenzi,
+            aspecte legate de comanda efectuată, aspecte legate de înscrierea la evenimente și alte asemenea, ne va fi
+            comunicată direct, prin email la adresa suport@braino.group. 
+        </p>
+        <p>Nemulțumirea dvs. va fi înregistrată și veți primi un răspuns în scris, pe adresa de email menționată cu
+            ocazia aducerii la cunoștința noastră a nemulțumirii dvs., în termen de cel mult 48 ore, raportate la o zi
+            lucrătoare. 
+        </p>
+        <p>Clientul declară că este de acord să nu facă publice aceste nemulțumiri (pe rețelele de socializare, media,
+            discuții la petreceri private sau în orice altă modalitate) sub rezerva suportării daunelor cauzate pentru
+            prejudiciul de imagine adus proprietarului site-ului prin aceste acțiuni. 
+        </p>
+        <p>Orice reclamație se depune în termen de maxim o lună de la data sesizării situației reclamate.
+        </p>
+        <h4>8. Proprietate intelectuală</h4>
+        <p>Conținutul prezentului site, inclusiv, dar fără a se limita la logo, reprezentări stilizate, simboluri,
+            imagini, fotografii, conținut texte și altele asemenea, precum și întreg conținutul informațiilor cuprinse
+            pe braino.group și a altor programe online comercializate prin intermediul site-ului sunt proprietatea
+            exclusivă a BRAINO SRL. Este nepermisă copierea, distribuirea, publicarea, modificarea, completarea,
+            utilizarea, expunerea, includerea, legarea, transmiterea, îndepărtarea însemnelor, fotografiilor,
+            imaginilor, bucăților de text, afișarea, vinderea, etc, a conținutului, datelor, informațiilor,
+            fotografiilor sau altor informații găsite pe site sau pe platformele/programele la care cumpărați accesul
+            prin intermediul site-ului, fără permisiunea expresă acordată în scris de către BRAINO SRL. Nu este permis
+            să transmiteți în favoarea unei terțe persoane parola dvs. de acces la braino.group. 
+        </p>
+        <p>Niciun Client nu dobândește, prin utilizarea și accesarea site-ului vreun drept sau vreo licență de utilizare
+            a vreuneia dintre informațiile de pe site sau vreun drept de proprietate intelectuală/ industrială asupra
+            produselor și/sau serviciilor comandate de pe site. Niciun client nu are dreptul de a utiliza un dispozitiv
+            automat sau manual pentru a monitoriza materialele disponibile pe site.
+        </p>
+        <h4>9. Prelucrarea datelor cu caracter personal</h4>
+        <p>Pentru detalii referitoare la prelucrarea datelor cu caracter personal, identitatea operatorului și alte
+            asemenea, consultați secțiunea „Politica de protecție a datelor” de pe site-ul nostru.
+        </p>
+        <h4>10.Newslettere</h4>
+        <p>Cu ocazia creării unui cont pe site Clientul are posibilitatea de a-și manifesta acordul cu privire la
+            primirea de Newslettere. 
+        </p>
+        <p>Newsletterul reprezintă un mijloc de informare periodic, exclusiv electronic (e-mail, SMS) asupra produselor,
+            serviciilor, evenimentelor, promoțiilor, etc. dintr-o anumită perioadă, fără niciun angajament din partea
+            proprietarului cu referire la informațiile conținute de acesta. 
+        </p>
+        <p>Clientul își poate retrage acest acord oricând, fără nicio obligație, prin accesarea butonului Dezactivare
+            din partea de jos a fiecărui Newsletter primit.
+        </p>
+        <h4>11. Forța majoră</h4>
+        <p>Nici una dintre părțile contractante nu răspunde de neexecutarea la termen sau/și de executarea în mod
+            necorespunzător - total sau parțial - a oricărei obligații care îi revine în baza prezentului contract, daca
+            neexecutarea sau executarea necorespunzătoare a obligației respective a fost cauzată de forța majoră, așa
+            cum este definită de lege, din motive independente de părți. 
+            Partea care invocă forța majoră este obligată să notifice celeilalte părți, în termen de 5 (cinci) zile,
+            producerea evenimentului și să ia toate măsurile posibile în vederea limitării consecințelor lui.
+        </p>
+        <h4>12. Legea aplicabilă</h4>
+        <p>Contractul va fi guvernat și interpretat în conformitate cu legea română. Orice neînțelegere intervenită
+            între proprietarul site-ului și Client în legătură cu raporturile decurgând din utilizarea site-ului urmează
+            să fie rezolvate pe cale amiabilă, iar în caz de eșec, să fie supuse instanțelor competente material din
+            Brașov.
+        </p>
+        <h4>13. Dispoziții finale</h4>
+        <p>Acest site este deținut de către BRAINO SRL, care vă oferă dreptul de a accesa și utiliza site-ul sub rezerva
+            acceptării de către dumneavoastră a acestor Termeni și condiții. Accesând și utilizând site-ul vă oferit
+            automat și neechivoc acordul pentru respectarea Termenilor și condițiilor de pe site. 
+        </p>
+        <p>BRAINO SRL are dreptul de a modifica Termenii și condițiile oricând, fără o notificare prealabilă, postând varianta actualizată pe site. Aveți obligația de a citi Termenii și condițiile ori de câte ori accesați site-ul. Aveți obligația de a respecta întocmai Termenii și condițiile de pe site și nu puteți pretinde necunoașterea Termenilor și condițiilor de pe site, valabili la data accesării, utilizării și/sau plasării unei comenzi pe site. 
+        </p>
+        <p>Administratorul site-ului își rezervă dreptul de a modifica structura si interfața oricărei pagini sau subpagini a site-ului in orice moment si la orice interval de timp liber ales, având dreptul de a întrerupe temporar, parțial sau în totalitate serviciile puse la dispoziția clienților prin intermediul acestui site fără vreo notificare prealabilă individuală sau generală. 
+        </p>
+        <p>Promoțiile oferite de către BRAINO SRL sunt anunțate pe site. Promoțiile își încep valabilitatea în momentul activării acestora pe site și își încetează valabilitatea din momentul inactivării acestora pe site. Promoțiile nu se cumulează între ele sau cu alte reduceri și sunt valabile numai în limitele și cu respectarea condițiilor de pe site. 
+        </p>
+        <p>Prezenții Termeni și condiții se completează cu aspecte/prevederi speciale cuprinse la descrierea produselor/evenimentelor disponibile pe site. În cazul în care intervin contradicții între prezenții Termeni și condiții și prevederile speciale mai sus amintite, au prioritate de aplicare prevederile speciale.
+        </p>
+    </article>
+
+    <footer class="footer" style="padding-bottom: 40px; max-width: 1190px">
+        <div class="footer-links">
+            <h6 class="footer-links__title">Links</h6>
+            <ul class="footer-links__list">
+                <li class="footer-links__list--item">
+                    <a class="item-link" href="./terms-conditions.html">Terms and Conditions</a>
+                </li>
+                <li class="footer-links__list--item">
+                    <a class="item-link" href="./privacy-policy.html">Privacy Policy</a>
+                </li>
+                <li class="footer-links__list--item">
+                    <a class="item-link" href="./cookies-policy.html">Cookie Policy</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-info">
+            <h6 class="footer-info__title">BrainO</h6>
+            <span class="footer-info__info">Asistent virtual inteligent pentru forța de vânzări din asigurări</span>
+        </div>
+        <div class="footer-us">
+            <h6 class="footer-us__title">Follow Us</h6>
+            <div class="footer-us__social">
+                <a class="footer-us__social--link" href="#">
+                    <img src="../assets/images/contacts/linked-in.svg">
+                </a>
+                <a class="footer-us__social--link" href="#">
+                    <img src="../assets/images/contacts/facebook.svg">
+                </a>
+                <a class="footer-us__social--link" href="#">
+                    <img src="../assets/images/contacts/youtube.svg">
+                </a>
+                <a class="footer-us__social--link" href="#">
+                    <img src="../assets/images/contacts/instagram.svg">
+                </a>
+            </div>
+        </div>
+    </footer>
+</section>

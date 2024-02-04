@@ -18,7 +18,7 @@ const path = {
     cssFolder: './src/assets/css/',
     cssFile: './src/assets/css/',
     htmlFiles: './*.html',
-    jsFiles: './assets/js/**/*.js'
+    jsFiles: './src/assets/js/**/*.js'
 };
 
 

@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        li {
+            line-height: 24px;
+            word-wrap: break-word;
+        }
+
+        h2 {
+            text-align: left;
+        }
+
+        ul:has(h4) {
+            padding-left: 20px;
+        }
+
+        p, h4, li {
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        @media (max-width: 768px) {
+            p, h4, li {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 468px) {
+            p, h4, li {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <title>Braino WebPage</title>
+</head>
+<body>
+<header>
+    <nav class="nav">
+        <div class="nav-menu">
+            <img class="nav-menu__logo" src="../assets/images/nav-bar/logo.svg" alt="logo">
+            <ul class="nav-menu__links">
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="../../index.html">Acasă</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="./about-us.html">Despre noi</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="../../index.html#miission">Misiune, viziune și
+                        valori</a>
+                </li>
+                <li class="nav-menu__links--item menu"><span>Funcționalități</span><span>
+                    <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.78037 5.8583L8.89304 0.766687C8.9617 0.681731 9 0.568861 9 0.451488C9 0.334114 8.9617 0.221245 8.89304 0.136289L8.8884 0.130807C8.85511 0.089479 8.81505 0.056571 8.77064 0.0340834C8.72624 0.0115957 8.67842 -9.25561e-07 8.6301 -9.21336e-07C8.58177 -9.17112e-07 8.53395 0.0115958 8.48955 0.0340834C8.44514 0.0565711 8.40508 0.089479 8.3718 0.130807L4.49923 4.92549L0.628206 0.130808C0.594923 0.0894797 0.55486 0.0565717 0.510454 0.0340841C0.466049 0.0115965 0.41823 -2.03432e-07 0.369905 -1.99207e-07C0.32158 -1.94983e-07 0.273761 0.0115965 0.229356 0.0340841C0.184951 0.0565718 0.144888 0.0894797 0.111605 0.130808L0.106958 0.13629C0.038301 0.221246 4.58347e-07 0.334115 4.68608e-07 0.451488C4.78869e-07 0.568862 0.038301 0.681732 0.106958 0.766688L4.21963 5.8583C4.25579 5.90308 4.29929 5.93872 4.34749 5.96308C4.39568 5.98744 4.44757 6 4.5 6C4.55243 6 4.60432 5.98744 4.65251 5.96308C4.70071 5.93872 4.74421 5.90308 4.78037 5.8583Z"
+                              fill="black"/>
+                    </svg>
+
+                </span>
+                    <ul class="nav-menu__links--item-ul">
+                        <li class="link-item"><a class="link-item__link" href="./braino-can.html">Ce poate să facă
+                            BrainO?</a></li>
+                        <li class="link-item"><a class="link-item__link" href="braino-insurances.html">Ce module conține
+                            BrainO?</a></li>
+                    </ul>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="./services.html">Servicii</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="./contacts.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-lg">
+            <span class="nav-lg__item"><img src="../assets/images/nav-bar/langs-romanian.svg" alt="ro"></span>
+            <span class="nav-lg__item"><img src="../assets/images/nav-bar/langs-en.svg" alt="en"></span>
+        </div>
+    </nav>
+
+    <nav class="navigation" role="navigation">
+        <div class="nav-menu mobile">
+            <img class="nav-menu__logo" src="../assets/images/nav-bar/logo.svg" alt="logo">
+        </div>
+        <div id="menuToggle">
+            <!--
+            A fake / hidden checkbox is used as click reciever,
+            so you can use the :checked selector on it.
+            -->
+            <input type="checkbox"/>
+
+            <!--
+            Some spans to act as a hamburger.
+
+            They are acting like a real hamburger,
+            not that McDonalds stuff.
+            -->
+            <span class="elements"></span>
+            <span class="elements"></span>
+            <span class="elements"></span>
+
+            <!--
+            Too bad the menu has to be inside of the button
+            but hey, it's pure CSS magic.
+            -->
+            <ul class="nav-menu__links" id="menu">
+                <div class="nav-lg">
+                    <span class="nav-lg__item"><img src="../assets/images/nav-bar/langs-romanian.svg" alt="ro"></span>
+                    <span class="nav-lg__item"><img src="../assets/images/nav-bar/langs-en.svg" alt="en"></span>
+                </div>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="../../index.html">Acasă</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="./about-us.html">Despre noi</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="../../index.html#mission">Misiune, viziune și valori</a>
+                </li>
+                <li class="nav-menu__links--item menu"><span>Funcționalități</span><span>
+                    <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.78037 5.8583L8.89304 0.766687C8.9617 0.681731 9 0.568861 9 0.451488C9 0.334114 8.9617 0.221245 8.89304 0.136289L8.8884 0.130807C8.85511 0.089479 8.81505 0.056571 8.77064 0.0340834C8.72624 0.0115957 8.67842 -9.25561e-07 8.6301 -9.21336e-07C8.58177 -9.17112e-07 8.53395 0.0115958 8.48955 0.0340834C8.44514 0.0565711 8.40508 0.089479 8.3718 0.130807L4.49923 4.92549L0.628206 0.130808C0.594923 0.0894797 0.55486 0.0565717 0.510454 0.0340841C0.466049 0.0115965 0.41823 -2.03432e-07 0.369905 -1.99207e-07C0.32158 -1.94983e-07 0.273761 0.0115965 0.229356 0.0340841C0.184951 0.0565718 0.144888 0.0894797 0.111605 0.130808L0.106958 0.13629C0.038301 0.221246 4.58347e-07 0.334115 4.68608e-07 0.451488C4.78869e-07 0.568862 0.038301 0.681732 0.106958 0.766688L4.21963 5.8583C4.25579 5.90308 4.29929 5.93872 4.34749 5.96308C4.39568 5.98744 4.44757 6 4.5 6C4.55243 6 4.60432 5.98744 4.65251 5.96308C4.70071 5.93872 4.74421 5.90308 4.78037 5.8583Z"
+                              fill="black"/>
+                    </svg>
+
+                </span>
+                    <ul class="nav-menu__links--item-ul">
+                        <li class="link-item"><a class="link-item__link" href="./braino-can.html">Ce poate să facă
+                            BrainO?</a></li>
+                        <li class="link-item"><a class="link-item__link" href="./braino-insurances.html">Ce module
+                            conține BrainO?</a></li>
+                    </ul>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="./services.html">Servicii</a>
+                </li>
+                <li class="nav-menu__links--item">
+                    <a class="nav-menu__links--item-link" href="./contacts.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<section class="section-privacy" style="padding: 0 24px">
+    <article style="text-align: justify">
+        <h2>Politica de protecție a datelor cu caracter personal</h2>
+        <p>Societatea BRAINO SRL, cu sediul social în Municipiul Brașov, str. 13 Decembrie, nr. 48, ap. 2, județ Brșov,
+            înmatriculată la Oficiul Registrului Comerțului de pe lângă Tribunalul Brașov sub nr. J8/1297/2023, având
+            CUI 48100730, în calitate de Operator de date cu caracter personal (denumită în continuare „Societatea” sau
+            „Operatorul”), respectă întocmai prevederile legale în vigoare privind protecția persoanelor cu privire la
+            prelucrarea datelor cu caracter personal și libera circulație a acestor date. Ne angajăm să prelucrăm datele
+            dumneavoastră cu caracter personal în concordanță cu Regulamentul (UE) 679/2016 (GDPR), precum și cu orice
+            altă legislație aplicabilă pe teritoriul României. 
+        </p>
+        <p>
+            Societatea este proprietară a platformei „braino.group”, astfel încât toate informațiile cuprinse în acest
+            material au legătură și sunt valabile în raport cu activitatea pe platforma „braino.group”, denumită în
+            continuare braino.group sau site-ul. 
+        </p>
+        <p>Pentru a înțelege mai bine politica noastră de protecție a datelor, vă invităm să citiți acest material. Ne
+            rezervăm dreptul de a actualiza și modifica periodic această Politică de protecție a datelor cu caracter
+            personal („Politica”) fără a vă cere acordul prealabil și fără a fi supuși unei proceduri de notificare
+            individuală ori specială a modificărilor aduse. În cazul oricărei astfel de modificări, vom afișa pe site
+            versiunea actualizată a Politicii de protecție a datelor cu caracter personal, rămânând în sarcina
+            dumneavoastră să verificați conținutul acestei Politici ori de câte ori accesați site-ul, pentru a vă
+            asigura că sunteți la curent cu ultima versiune. 
+        </p>
+        <p>Vă stăm la dispoziție pentru informații și pe email suport@braino.group.
+        </p>
+        <ul>
+            <li>
+                <h4>1. Cine suntem?</h4>
+            </li>
+        </ul>
+        <p>Calitatea de Operator de Date cu caracter personal o are Societatea BRAINO SRL, cu sediul social în
+            Municipiul Brașov, str. 13 Decembrie, nr. 48, ap. 2, județ Brșov, înmatriculată la Oficiul Registrului
+            Comerțului de pe lângă Tribunalul Brașov sub nr. J8/1297/2023, având CUI 48100730. 
+        </p>
+        <p>Este posibil să transmitem datele personale pe care ni le furnizați către companii afiliate și/sau către alți
+            parteneri și colaboratori cu care avem stabilite raporturi contractuale în vederea desfășurării
+            activităților noastre și a îndeplinirii obligațiilor legale care ne revin. Transmiterea de date personale
+            către terți are loc în baza unui angajament de confidențialitate din partea acestora și o asumare a
+            asigurării protecției datelor.
+        </p>
+        <ul>
+            <li>
+                <h4>2. Ce fel de date personale prelucrăm</h4>
+            </li>
+        </ul>
+        <p>Datele personale pe care le prelucrăm sunt: nume, prenume, adresă, adresa de email, număr de telefon, IP. 
+        </p>
+        <p>De asemenea, vă punem la dispoziție pe site o secțiune specială dedicată oferirii de testimoniale, respectiv
+            materiale scrise însoțite sau nu de fotografia pe care o încărcați personal pe site sau prin intermediul
+            site-urilor de socializare afiliate sau materiale audio sau video în care să expuneți experiența
+            dumneavoastră raportat la serviciile de pe site și care pot fi utilizate de către Operator în scopul
+            serviciilor de reclamă, marketing și publicitate a site-ului, inclusiv prin publicare pe acest site, dar și
+            pe alte canale de promovare. 
+        </p>
+        <p>Când vizitați site-ul, colectăm automat anumite informații despre dispozitivul dumneavoastră, cum ar fi
+            informații despre browser, adresa IP, fus orar și unele cookie-uri instalate pe dispozitiv. 
+        </p>
+        <p>Când contractați un serviciu prin intermediul site-ului nostru (cursuri, workshop-uri, programe etc.)
+            colectăm datele necesare care să permită identificarea dumneavoastră: nume, prenume, date de contact. 
+        </p>
+        <p>Pentru beneficiarii de abonamente de grup contractate de angajatorul dumneavoastră: adresa de e-mail, nume și
+            prenume. 
+        </p>
+        <p>Folosim Google Analytics pentru a ne ajuta să înțelegem cum utilizează clienții noștri site-ul - puteți citi
+            mai multe despre modul în care Google utilizează informațiile dvs. personale
+            aici: <a href=" https://www.google.com/intl/ro/policies/privacy/" target="_blank"> https://www.google.com/intl/ro/policies/privacy</a>
+            De asemenea, puteți renunța la Google Analytics
+            aici: <a href=" https://tools.google.com/dlpage/gaoptout" target="_blank"> https://tools.google.com/dlpage/gaoptout</a>
+        </p>
+        <p>Vă rugăm să consultați și secțiunea privind Politica de cookie-uri afișată pe pagina principală a site-ului
+            nostru. 
+        </p>
+        <p>Dacă participați la programele noastre organizate prin intermediul platformei braino.group (cu titlu de
+            exemplu: Mastermind), în cadrul întâlnirilor de grup este posibil să furnizați o serie de informații în
+            privința cărora toți participanții își asumă un angajament de confidențialitate scris, informațiile fiind
+            folosite  de către noi exclusiv în scopul desfășurării programului. Nu ne asumăm responsabilitatea pentru
+            dezvăluirea informațiilor astfel comunicate în afara grupului, de către alți membri ai grupului, însă, din
+            considerente de respect reciproc, insistăm asupra obligației de asigurare a confidențialității acestor
+            informații. Vă atragem, de asemenea, atenția asupra faptului că și și dvs aveți obligația de a păstra
+            confidențialitatea datelor și informațiilor celorlalți participanți la programele noastre.
+        </p>
+        <p>Nu colectăm și nu prelucrăm date sensibile, definite ca atare de GDPR. Nu dorim să colectăm sau să prelucrăm
+            date ale minorilor.
+        </p>
+        <ul>
+            <li>
+                <h4>3. Scopul pentru care prelucrăm date personale</h4>
+            </li>
+        </ul>
+        <p>Solicităm și prelucrăm date personale pentru: </p>
+        <ul>
+            <li>a face posibilă crearea contului dumneavoastră pe site și funcționarea site-ului </li>
+            <li>asigurarea plății sumelor aferente serviciilor oferite pe site-ul nostru</li>
+            <li>transmiterea de newslettere, invitații, materiale legate de serviciile noastre și informații legate de
+                evenimentele sau programele pe care le organizăm sau pe care le promovăm – dacă vă oferiți
+                consimțământul în acest sens 
+            </li>
+            <li>oferirea de răspunsuri la reclamațiile plasate</li>
+            <li>evaluarea serviciilor oferite pe site </li>
+            <li>monitorizarea vânzărilor și comportamentul Clienților, scopuri administrative, de media și altele
+                asemenea - dacă vă oferiți consimțământul în acest sens
+            </li>
+            <li>comunicarea de oferte de bunuri și/sau servicii - dacă vă oferiți consimțământul în acest sens.</li>
+            <li>Prestarea serviciilor disponibile pe site, activarea sau particularizarea abonamentelor dumneavoastră la
+                serviciile noastre, participarea la programele noastre;
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h4>4.Temeiurile prelucrării</h4>
+            </li>
+        </ul>
+        <p>Operatorul are dreptul de a prelucra date personale pentru scopurile prezentate mai sus: </p>
+        <ul>
+            <li>pentru că prelucrarea datelor este necesară pentru a face posibilă crearea contului, funcționarea
+                site-ului și accesul la serviciile oferite pe site (încheierea contractului de prestări servicii la 2
+                distanță), realizarea plății costurilor aferente serviciilor prestare și oferirea de răspunsuri la
+                reclamațiile plasate, dacă este cazul, 
+            </li>
+            <li>pentru executarea unui contract încheiat între Operator și dumneavoastră</li>
+            <li>pentru că v-ați dat consimțământul expres în acest sens prin bifarea căsuțelor aferente </li>
+        </ul>
+        <p>În cazul în care prelucrarea datelor nu este necesară pentru încheierea și executarea raporturilor noastre
+            juridice, nu vom prelucra date personale pentru niciunul dintre scopurile de mai sus dacă nu avem
+            consimțământul dumneavoastră în acest sens.
+        </p>
+        <ul>
+            <li>
+                <h4>5. Durata de stocare și prelucrare a datelor personale</h4>
+            </li>
+        </ul>
+        <p>Prelucrăm și stocăm datele personale pe durata necesară îndeplinirii scopurilor pentru care datele au fost
+            colectate și în orice caz pe perioada impusă de reglementările legale aplicabile. 
+            Actualizăm periodic baza noastră de date astfel încât să nu stocăm date care nu mai sunt necesare scopurilor
+            pentru care au fost colectate.
+        </p>
+        <ul>
+            <li>
+                <h4>6. Măsuri de securitate a datelor</h4>
+            </li>
+        </ul>
+        <p>Societatea asigură măsurile tehnice și juridice adecvate pentru a asigura o protecție efectivă a datelor cu
+            caracter personal aparținând persoanelor care ne furnizează astfel de date. 
+        </p>
+        <p>Ne angajăm să vă păstrăm datele personale în siguranță și luăm măsurile rezonabile în acest sens, inclusiv
+            împotriva accesului neautorizat, al utilizării neautorizate a datelor, distrugerii, pierderii sau alterării
+            acestora. 
+        </p>
+        <p>Ne instruim sistematic angajații legat de importanța protejării datelor cu caracter personal, am instituit
+            proceduri interne în acest sens și, în plus, depunem toate eforturile pentru a ne asigura că și partenerii
+            noștri gestionează măsuri adecvate pentru prelucrarea datelor personale care pot ajunge la ei în cadrul
+            raporturilor noastre contractuale. 
+        </p>
+        <p>De asemenea, plățile care se efectuează prin intermediul site-ului nostru, strict pentru achitarea
+            serviciilor pe care noi vi le punem la dispoziție, se realizează în condiții de securitate, conform
+            politicilor de securitate implementate de furnizorii acestui serviciu: <a
+                    href="https://netopia-payments.com" target="_blank">https://netopia-payments.com/</a>.
+        </p>
+        <ul>
+            <li>
+                <h4>7. Transmiterea datelor către alte persoane</h4>
+            </li>
+        </ul>
+        <p>Este posibil să transmitem datele personale pe care ni le furnizați către companii afiliate și/sau către alți
+            parteneri și colaboratori cu care avem stabilite raporturi contractuale în vederea desfășurării
+            activităților noastre și a îndeplinirii obligațiilor legale care ne revin, cum ar fi: specialiștii care
+            postează materiale pe site, furnizorii de servicii informatice, de servicii de contabilitate, de servicii
+            juridice, de servicii de marketing, de servicii de curierat, de servicii de internet și telefonie mobilă,
+            procedatorii de plăți care sunt autorizați de noi să intermedieze plățile, specialiști în domeniul de
+            activitate în care activăm, pe care îi contractăm pe a vă oferi o calitate cât mai bună a serviciilor
+            noastre și alți asemenea furnizori. 
+        </p>
+        <p>Transmiterea datelor către terțe persoane are loc sub rezerva asumării de către acestea a clauzelor de
+            confidențialitate pe care le stabilim. 
+        </p>
+        <p>De asemenea, putem transmite unele din datele personale colectate către autoritățile sau instituțiile publice
+            competente, atunci când legea impune acest lucru sau către instanțele de judecată atunci când ne apărăm în
+            justiție sau când ni se cere de către instanță acest lucru. 
+        </p>
+        <p>Vă rugăm să consultați și secțiunea privind Politica de cookie-uri afișată pe pagina principală a site-ului
+            nostru.
+        </p>
+        <p>Transferul datelor cu caracter personal în afara țării 
+        </p>
+        <p>În contextul operațiunilor descrise mai sus, datele dumneavoastră cu caracter personal pot fi transferate în
+            afara țării către state din Uniunea Europeana (“UE”) sau din Spatiul Economic European (“SEE”). 
+        </p>
+        <p>Astfel, vă informăm că orice transfer efectuat de către Operator către un stat membru UE sau SEE va respecta
+            prevederile legale din Regulamentul General privind protecția datelor nr. 2016/679 adoptat de Parlamentul
+            European (“GDPR”). 
+        </p>
+        <p>Datele cu caracter personal menționate în aceastănotăde informare nu sunt transferate către state care nu
+            asigură protecție adecvatăîn ceea ce privește prelucrarea datelor cu caracter personal.
+        </p>
+        <ul>
+            <li>
+                <h4>8. Ce drepturi aveți în legătură cu datele personale pe care ni le furnizați</h4>
+            </li>
+        </ul>
+        <p>
+            Ne angajăm să asigurăm securitatea datelor cu caracter personal prin adopta de măsuri tehnice și
+            organizatorice adecvate, conform standardelor industriei. Platforma este aliniată la cerințele GDPR și
+            folosește tehnologie de criptare și securizare a datelor la nivelul celor folosite de instituțiile bancare. 
+        </p>
+        <p>Vă asigurăm și vă respectăm drepturile stabilite prin legislația în vigoare. 
+        </p>
+        <p>Dreptul la informare – puteți solicita informații și detalii privind activitățile de prelucrare a datelor
+            personale. Vă stăm la dispoziție la adresa de email: suport@braino.group. Suntem atenți la asigurarea
+            dreptului dumneavoastră de a primi informații clare, transparente, ușor de înțeles și accesibile cu privire
+            la modul în care vă prelucrăm datele, inclusiv detalii legate de drepturile pe care le dețineți în acest
+            sens și care sunt prezentate și în acest document. 
+        </p>
+        <p>Dreptul la rectificare – în cazul în care constatați că datele dumneavoastră personale pe care le prelucrăm
+            sunt incorecte, incomplete, inexacte, le puteți rectifica sau le puteți completa printro simplă solicitare
+            de rectificare trimisă la adresa de email  <a href="mailto:suport@braino.group">suport@braino.group</a>. 
+        </p>
+        <p>Dreptul la stergerea datelor ("dreptul de a fi uitat") – puteți obtine ștergerea datelor, în cazul în care
+            prelucrarea acestora nu a fost legală sau în alte cazuri prevăzute de lege, Ștergerea datelor poate avea loc
+            în oricare dintre situațiile următoare:
+        </p>
+        <p>a) nu mai avem nevoie de datele personale pentru îndeplinirea vreunuia dintre scopurilor pentru care le-am
+            prelucrat anterior; 
+        </p>
+        <p>b) vă retrageți consimțământul pe baza căruia v-am prelucrat anterior și nu există un alt temei juridic pe
+            care ne putem baza o prelucrare viitoare; 
+        </p>
+        <p>c) vă opuneți prelucrării datelor atunci când prelucrăm datele în scop de marketing direct (inclusiv,
+            profilarea în scop de marketing direct), 
+        </p>
+        <p>d) vă opuneți prelucrării datelor bazat pe interesul nostru legitim și nu putem să demonstrăm că avem motive
+            legitime care justifică prelucrarea și care prevalează asupra intereselor, drepturilor și libertăților
+            dumneavoastră; 
+        </p>
+        <p>e) datele personale sunt prelucrate contrar legii; 
+        </p>
+        <p>f) datele personale trebuie șterse pentru a ne conforma obligațiilor noastre legale.  
+        </p>
+        <p>Vă vom putea respinge solicitarea de ștergere a datelor dacă: 
+        </p>
+        <p>a) trebuie să ne conformăm unor obligații legale de a păstra datele; 
+        </p>
+        <p>b) dacă datele ne sunt necesare pentru constatarea, exercitarea sau apărarea drepturilor noastre în justiție.
+        </p>
+        <p>Dreptul la restricționarea prelucrării - puteți solicita restricționarea prelucrării în cazurile în care: 
+        </p>
+        <p>a) contestați exactitatea datelor pe o perioadă care ne permite verificarea corectitudinii datelor;</p>
+        <p>b) prelucrarea este ilegală, dar vă opuneți ștergerii datelor cu caracter personal, solicitând în schimb
+            restricționarea;</p>
+        <p>c) în cazul în care Operatorul nu mai are nevoie de datele cu caracter personal în scopul prelucrării, dar
+            dumneavoastră ni le solicitați pentru constatarea, exercitarea sau apărarea unui drept în instanță sau în
+            fața organelor de arbitraj; 
+        </p>
+        <p>d) în cazul în care v-ați opus prelucrării, pentru intervalul de timp în care se verifică dacă drepturile
+            noastre legitime prevalează asupra drepturilor dumneavoastră. 
+        </p>
+        <p>Dreptul de opoziție – vă puteți opune în special, prelucrărilor de date care se întemeiază pe interesul
+            nostru legitim. 
+        </p>
+        <p>Dreptul la portabilitatea datelor - puteți primi, în anumite condiții, datele personale pe care ni le-ați
+            furnizat, într-un format care poate fi citit automat sau puteți solicita ca respectivele date să fie
+            transmise altui operator 
+        </p>
+        <p>Dreptul de a depune plângere - puteți depune plângere fată de modalitatea de prelucrare a datelor personale
+            la Autoritatea Natională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP). Date de
+            contact și informații legate de ANSPDCP găsiți pe site-ul <a href="http://www.dataprotection.ro"
+                                                                         target="_blank">http://www.dataprotection.ro</a>. 
+        </p>
+        <p>Dreptul de retragere a consimțământului – în cazurile în care prelucrarea se întemeiază pe consimțământul
+            dvs., vi-l puteți retrage oricând. Retragerea consimțământului va avea efecte doar pentru viitor,
+            prelucrarea efectuată anterior retragerii rămânând in continuare valabilă. 
+        </p>
+        <p>Dreptul de a nu fi supus unor decizii automate sau profilare suplimentare aferente deciziilor automate:
+            puteți cere și obține intervenția umană cu privire la respectiva prelucrare sau vă puteți exprima propriul
+            punct de vedere cu privire la acest tip de prelucrare 
+        </p>
+        <p>Vă puteți exercita aceste drepturi, fie individual, fie cumulat, foarte ușor, prin simpla transmitere a unei
+            solicitări pe email la adresa <a href="mailto:suport@braino.group">suport@braino.group</a>.
+        </p>
+        <ul>
+            <li>
+                <h4>9. Datele de contact ale responsabilului cu protecția datelor</h4>
+            </li>
+        </ul>
+        <p>Mădălina Ivona Bejenariu, tel. 0738 135 477, email: <a href="mailto:dpo@braino.group">dpo@braino.group</a> 
+        </p>
+        <ul>
+            <li>
+                <h4>10. Date ale minorilor</h4>
+            </li>
+        </ul>
+        <p>Nu dorim să colectăm sau să prelucrăm date ale minorilor care nu au împlinit vârsta de 18 ani. Vă rugăm să nu
+            vă creați cont pe site-ul nostru și să ne furnizați nicio informație în cazul în care nu aveți împlinită
+            vârsta de 18 ani. 
+        </p>
+        <p>Societatea are dreptul de a modifica Politica de protecție a datelor oricând, fără o notificare prealabilă,
+            postând varianta actualizată pe site. Aveți obligația de a citi Termenii și condițiile, Politica de
+            protecție a datelor și Politica de cookie-uri ori de câte ori accesați site-ul.</p>
+    </article>
+</section>
+
+<footer class="footer" style="padding-left: 24px; padding-right: 24px; padding-bottom: 40px; max-width: 1190px">
+    <div class="footer-links">
+        <h6 class="footer-links__title">Links</h6>
+        <ul class="footer-links__list">
+            <li class="footer-links__list--item">
+                <a class="item-link" href="./terms-conditions.html">Terms and Conditions</a>
+            </li>
+            <li class="footer-links__list--item">
+                <a class="item-link" href="./privacy-policy.html">Privacy Policy</a>
+            </li>
+            <li class="footer-links__list--item">
+                <a class="item-link" href="cookies-policy.html">Cookie Policy</a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer-info">
+        <h6 class="footer-info__title">BrainO</h6>
+        <span class="footer-info__info">Asistent virtual inteligent pentru forța de vânzări din asigurări</span>
+    </div>
+    <div class="footer-us">
+        <h6 class="footer-us__title">Follow Us</h6>
+        <div class="footer-us__social">
+            <a class="footer-us__social--link" href="#">
+                <img src="../assets/images/contacts/linked-in.svg">
+            </a>
+            <a class="footer-us__social--link" href="#">
+                <img src="../assets/images/contacts/facebook.svg">
+            </a>
+            <a class="footer-us__social--link" href="#">
+                <img src="../assets/images/contacts/youtube.svg">
+            </a>
+            <a class="footer-us__social--link" href="#">
+                <img src="../assets/images/contacts/instagram.svg">
+            </a>
+        </div>
+    </div>
+</footer>
+

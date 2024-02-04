@@ -41,7 +41,7 @@
                     </ul>
                 </li>
                 <li class="nav-menu__links--item">
-                    <a class="nav-menu__links--item-link" href="#">Servicii</a>
+                    <a class="nav-menu__links--item-link" href="./services.html">Servicii</a>
                 </li>
                 <li class="nav-menu__links--item">
                     <a class="nav-menu__links--item-link" href="./contacts.html">Contact</a>
@@ -106,7 +106,7 @@
                     </ul>
                 </li>
                 <li class="nav-menu__links--item">
-                    <a class="nav-menu__links--item-link" href="#">Servicii</a>
+                    <a class="nav-menu__links--item-link" href="./services.html">Servicii</a>
                 </li>
                 <li class="nav-menu__links--item">
                     <a class="nav-menu__links--item-link" href="./contacts.html">Contact</a>
@@ -145,12 +145,14 @@
                 </div>
             </div>
             <div class="contact-items__email">
-                <form class="form-email" onsubmit="submit">
+                <form class="form-email" action="mailto:contact@braino.group" method="POST" enctype="text/plain" onsubmit="location.href='./braino-can.html'">
                     <div class="form-email__box">
-                        <input class="form-email__box--name" type="text" placeholder="Numele" style='background-image: url("../assets/images/contacts/names-placeholder.svg")'>
-                        <input class="form-email__box--email" type="email" placeholder="Email" style='background-image: url("../assets/images/contacts/emails-placeholder.svg")'>
+                        <input class="form-email__box--name" type="text" placeholder="Numele" required
+                               style='background-image: url("../assets/images/contacts/names-placeholder.svg")'>
+                        <input class="form-email__box--email" type="email" placeholder="Email" required
+                               style='background-image: url("../assets/images/contacts/emails-placeholder.svg")'>
                     </div>
-                    <textarea class="form-email__message" placeholder="Mesaj...."></textarea>
+                    <textarea class="form-email__message" placeholder="Mesaj...." required></textarea>
                     <button class="form-email__button" type="submit">Trimite</button>
                 </form>
             </div>
@@ -163,13 +165,13 @@
         <h6 class="footer-links__title">Links</h6>
         <ul class="footer-links__list">
             <li class="footer-links__list--item">
-                <a class="item-link" href="#">Terms and Conditions</a>
+                <a class="item-link" href="./terms-conditions.html">Terms and Conditions</a>
             </li>
             <li class="footer-links__list--item">
-                <a class="item-link" href="#">Privacy Policy</a>
+                <a class="item-link" href="./privacy-policy.html">Privacy Policy</a>
             </li>
             <li class="footer-links__list--item">
-                <a class="item-link" href="#">Cookie Policy</a>
+                <a class="item-link" href="cookies-policy.html">Cookie Policy</a>
             </li>
         </ul>
     </div>
