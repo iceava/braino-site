@@ -2,10 +2,11 @@
 
 .contact {
   display: flex;
+  position: relative;
   flex-direction: column;
   max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 150px;
+  margin: 150px auto 0 auto;
+  z-index: 1;
   @media (max-width: 768px) {
     margin-top: 60px;
     margin-bottom: 60px;

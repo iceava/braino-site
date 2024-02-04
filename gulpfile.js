@@ -12,7 +12,7 @@ const sortCSSmq = require('sort-css-media-queries');
 const path = {
     scssFolder: './src/assets/scss/',
     htmlFolder: './src/pages',
-    htmlFile: './src/pages/braino-insurances.html',
+    htmlFile: './src/pages/services.html',
     scssFiles: './src/assets/scss/**/*.scss',
     scssFile: './src/assets/scss/style.scss',
     cssFolder: './src/assets/css/',
