@@ -1,8 +1,14 @@
 .nav {
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   justify-content: center;
+  background-color: #fff;
   align-items: center;
   padding: 18px 120px;
+  z-index: 299;
   @media (max-width: 1080px) {
     padding: 18px 24px;
     align-items: flex-start;
@@ -135,7 +141,12 @@
 
 
 .navigation {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 299;
   padding-top: 24px;
   @media (min-width: 769px) {
     display: none;

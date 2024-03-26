@@ -1,8 +1,13 @@
 @import "mixins";
 
 .section-about {
+  margin-top: 136px;
   background: linear-gradient(180deg, #eef8fea6 3%, rgba(255, 255, 255, 0) 5%);
   padding: 11px 16px 0 16px;
+
+  @media (max-width: 768px) {
+    margin-top: 96px;
+  }
 }
 
 .article {

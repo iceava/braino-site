@@ -329,6 +329,7 @@ template {
 }
 
 .section-about {
+  margin-top: 136px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(3%, rgba(238, 248, 254, 0.6509803922)), color-stop(5%, rgba(255, 255, 255, 0)));
   background: linear-gradient(180deg, rgba(238, 248, 254, 0.6509803922) 3%, rgba(255, 255, 255, 0) 5%);
   padding: 11px 16px 0 16px;
@@ -756,13 +757,19 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #fff;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 18px 120px;
+  z-index: 299;
 }
 .nav-lg {
   display: -webkit-box;
@@ -882,7 +889,12 @@ template {
 }
 
 .navigation {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 299;
   padding-top: 24px;
 }
 
@@ -1033,6 +1045,7 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 136px;
   background: -webkit-gradient(linear, left top, left bottom, from(#EEF8FE), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(180deg, #EEF8FE 0%, rgba(255, 255, 255, 0) 100%);
   -webkit-box-orient: vertical;
@@ -1325,6 +1338,7 @@ template {
 }
 
 .can {
+  margin-top: 136px;
   padding: 0 24px;
 }
 .can-cards {
@@ -1825,6 +1839,7 @@ template {
 }
 
 .section-services {
+  margin-top: 136px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgba(238, 248, 254, 0.6509803922)), color-stop(40%, rgba(255, 255, 255, 0)));
   background: linear-gradient(180deg, rgba(238, 248, 254, 0.6509803922) 10%, rgba(255, 255, 255, 0) 40%);
   padding: 0 24px;
@@ -1833,6 +1848,11 @@ template {
 
 * {
   font-family: "Open Sans", sans-serif;
+}
+
+.active {
+  font-weight: 600 !important;
+  text-decoration: underline !important;
 }
 
 @media (min-width: 768px) and (max-width: 986px) {
@@ -2019,6 +2039,9 @@ template {
 }
 
 @media (max-width: 768px) {
+  .section-about {
+    margin-top: 96px;
+  }
   .article:first-of-type {
     margin-top: 40px;
   }
@@ -2157,6 +2180,9 @@ template {
   .menu:hover > .nav-menu__links--item-ul {
     gap: 0;
   }
+  .assistance {
+    margin-top: 96px;
+  }
   .assistance-box {
     grid-gap: 12px;
   }
@@ -2225,6 +2251,9 @@ template {
     text-align: center;
     margin-top: 8px;
   }
+  .can {
+    margin-top: 96px;
+  }
   .can-cards__card:first-of-type .can-cards__card--text > span {
     font-size: 16px !important;
     line-height: 26px !important;
@@ -2277,6 +2306,9 @@ template {
   .services-cards__card--list .list-item {
     font-size: 16px;
     line-height: 26px;
+  }
+  .section-services {
+    margin-top: 90px;
   }
 }
 

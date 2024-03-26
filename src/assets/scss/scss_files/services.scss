@@ -204,7 +204,12 @@
 }
 
 .section-services {
+  margin-top: 136px;
   background: linear-gradient(180deg, rgba(238, 248, 254, 0.6509803922) 10%, rgba(255, 255, 255, 0) 40%);
   padding: 0 24px;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    margin-top: 90px;
+  }
 }
