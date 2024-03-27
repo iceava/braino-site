@@ -198,8 +198,12 @@
     width: 100%;
     height: 500px;
     border-radius: 20px;
-    box-shadow: 0 3px 20px 0 #080F3426;
     margin-top: 18px;
+    overflow: hidden;
+    @media (max-width: 320px) {
+      border-radius: 0;
+      overflow-x: auto;
+    }
   }
 }
 
